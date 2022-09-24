@@ -5,7 +5,7 @@
   </a>
 </p>
 
-#In servitio Turico - In the service of Zürich
+# In servitio Turico - In the service of Zürich
 
 **Wordpress Theme originally built for the cantonal election campaign in the canton of Zürich in on February 12th 2023.**
 
