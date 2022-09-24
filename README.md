@@ -5,15 +5,9 @@
   </a>
 </p>
 
-<br>
-<br>
-
 # In servitio Turico - In the service of Zürich
 
 **Wordpress Theme originally built for the cantonal election campaign in the canton of Zürich in on February 12th 2023.**
-
-<br>
-<br>
 
 ## Roadmap
 | Deadline              | Task                |
@@ -24,9 +18,6 @@
 | 06.06.2022            | Launch of page on [hot domain](https://wahlen-kanton-zuerich.ch) |
 | Post 06.06.2022       | Writing of documentation etc. |
 
-<br>
-<br>
-
 ## Requirements
 - [DDEV](https://github.com/drud/ddev): Used as development environment
 - [PHP](https://www.php.net/) version 7.4 or greater
@@ -35,9 +26,6 @@
 - [NodeJS](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/)
 
 > :warning: **This theme uses [Advanced custom fields ACF](https://www.advancedcustomfields.com/).** If you do not own a license for this plugin, consider buying it. If you are a member of the democratic socialist party of Switzerland, please contact [Timothy Oesch](mailto:timothy@kpunkt.ch)
-
-<br>
-<br>
 
 ## Setup
 Clone respository. Make sure you have an instance of docker running, then
@@ -67,9 +55,6 @@ npm run watch
 npm run prod
 # Building a production ready bundle
 ```
-
-<br>
-<br>
 
 ## Todos
 - [ ] Clickable Prototype
