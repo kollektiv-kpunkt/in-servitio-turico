@@ -1,0 +1,114 @@
+{
+    "Template Part": {
+        "prefix": [
+            "template-part"
+        ],
+        "body": [
+            "get_template_part( \"template-parts/elements/${0:template name}\"); ",
+        ],
+        "description": "Get a template part from the theme."
+    },
+    "Mobile Styles large (1080px)": {
+        "prefix": [
+            "ms-large"
+        ],
+        "body": [
+            "@media (max-width: 1080px) {",
+            "    ${1:style}",
+            "}",
+        ],
+        "description": "Add mobile styles large."
+    },
+    "Mobile Styles medium (980px)": {
+        "prefix": [
+            "ms-medium"
+        ],
+        "body": [
+            "@media (max-width: 980px) {",
+            "    ${1:style}",
+            "}",
+        ],
+        "description": "Add mobile styles medium."
+    },
+    "Mobile Styles small (780px)": {
+        "prefix": [
+            "ms-small"
+        ],
+        "body": [
+            "@media (max-width: 780px) {",
+            "    ${1:style}",
+            "}",
+        ],
+        "description": "Add mobile styles small."
+    },
+    "Mobile Styles x-small (480px)": {
+        "prefix": [
+            "ms-x-small"
+        ],
+        "body": [
+            "@media (max-width: 480px) {",
+            "    ${1:style}",
+            "}",
+        ],
+        "description": "Add mobile styles x-small."
+    },
+    "Mobile Styles tiny (360px)": {
+        "prefix": [
+            "ms-tiny"
+        ],
+        "body": [
+            "@media (max-width: 360px) {",
+            "    ${1:style}",
+            "}",
+        ],
+        "description": "Add mobile styles tiny."
+    },
+    "Mobile Styles special": {
+        "prefix": [
+            "ms-special"
+        ],
+        "body": [
+            "@media (max-width: ${1:width}px) {",
+            "    ${1:style}",
+            "}",
+        ],
+        "description": "Add mobile styles special."
+    },
+    "Register block": {
+        "prefix": [
+            "reg-block"
+        ],
+        "body": [
+            "acf_register_block_type(array(",
+            "    'name'              => '${1:name}',",
+            "    'title'             => __('${2:beautifulname}'),",
+            "    'description'       => __('${3:description}'),",
+            "    'render_template'   => 'template-parts/blocks/${1:name}.php',",
+            "    'category'          => 'ist',",
+            "    'icon'              => '',",
+            "    'keywords'          => array(${4:keywords}),",
+            "));",
+        ],
+        "description": "Register new block."
+    },
+    "Block Placeholder": {
+        "prefix": [
+            "plac-block"
+        ],
+        "body": [
+            "<div style='height: 400px; background: #242424; display: flex; justify-content: center; align-items: center; border-radius: 5px'>",
+            "    <p style='max-width: 50%; text-align: center; font-style: italic; color: #aaa'><b>This is a placeholder for the block '${1:Name}': The content will be displayed here, don't worry.</b></p>",
+            "</div>",
+        ],
+        "description": "Add placeholder for block."
+    },
+    "i18n Variable": {
+        "prefix": [
+            "i18n"
+        ],
+        "body": [
+            "<?= \\$_ENV['i18n']['${1:level1}']['${2:variable}'] ?>",
+        ],
+        "description": "Add i18n variable."
+    },
+}

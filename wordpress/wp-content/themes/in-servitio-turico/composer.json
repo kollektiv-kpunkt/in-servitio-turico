@@ -1,0 +1,17 @@
+{
+  "name": "kollektiv-kpunkt/to-mellon-mas",
+  "description": "WP Theme for popular initiative by JUSO CH.",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "timothyoesch",
+      "email": "54284649+timothyoesch@users.noreply.github.com"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.4",
+    "matomo/matomo-php-tracker": "^3.0",
+    "ramsey/uuid": "^4.4"
+  }
+}
