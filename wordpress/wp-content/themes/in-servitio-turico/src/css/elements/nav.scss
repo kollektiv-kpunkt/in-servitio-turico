@@ -1,0 +1,116 @@
+.ist-nav-content {
+    .ist-nav-logo {
+        svg {
+            height: 3.5rem;
+            width: auto;
+        }
+        path {
+            fill: white;
+        }
+    }
+}
+
+.ist-nav-menu-wrapper {
+    .ist-nav-menu {
+        display: flex;
+        column-gap: 2.5rem;
+        align-items: center;
+
+        .ist-button {
+            margin-right: -1rem;
+
+            a {
+                background-image: none;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media (max-width: 980px) {
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .ist-nav-mobilemenu-tofuburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 0.2rem;
+
+        span {
+            display: block;
+            width: 2.5rem;
+            height: 0.2rem;
+            background-color: white;
+            transition: 0.25s ease-in-out transform, 0.25s ease-in-out opacity;
+        }
+    }
+}
+
+.ist-nav-wrapper {
+    .ist-nav-bg {
+        background: var(--navbg);
+        background-blend-mode: hard-light;
+        opacity: var(--navopacity);
+        z-index: -1;
+    }
+
+    --navbg : linear-gradient(180deg, #000000 16.15%, rgba(0, 0, 0, 0) 100%);
+    --navopacity : 0.4;
+
+    &.scrollbar {
+        --navbg: var(--spred);
+        --navopacity: 1;
+    }
+}
+
+.ist-nav-mobilemenu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: 0.25s ease-in-out transform, 0.25s ease-in-out opacity;
+
+    .ist-nav-mobilemenu-container {
+        width: 480px;
+        max-width: 100vw;
+    }
+
+    .ist-nav-menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        .ist-button {
+            width: 100%;
+        }
+    }
+}
+
+.ist-nav-mobilemenu-open {
+    .ist-nav-mobilemenu-tofuburger {
+        span {
+            &:nth-child(1) {
+                transform: translateY(0.4rem) rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-0.4rem) rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        }
+    }
+
+    .ist-nav-mobilemenu-wrapper {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

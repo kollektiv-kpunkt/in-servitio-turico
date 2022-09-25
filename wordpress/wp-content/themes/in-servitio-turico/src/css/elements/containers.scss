@@ -1,0 +1,30 @@
+.md-container {
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1533px) {
+        max-width: 90%;
+    }
+
+}
+
+.lg-container {
+    max-width: 1795px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1995px) {
+        max-width: 90%;
+    }
+}
+
+.bg-banner {
+    background-image: linear-gradient(0deg, white 2rem, var(--banner-color) 2rem, var(--banner-color) calc(100% - 2rem), white calc(100% - 2rem));
+
+    --banner-color : var(--spred);
+
+    &.banner-spblack {
+        --banner-color : var(--spblack);
+    }
+}

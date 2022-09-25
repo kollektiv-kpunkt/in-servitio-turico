@@ -1,0 +1,16 @@
+.ist-block-content .wp-block-columns {
+    gap: 4rem;
+    margin-bottom: 0;
+
+    @media (max-width: 980px) {
+        gap: 3rem;
+    }
+
+    @media (max-width: 781px) {
+        gap: 2rem;
+
+        &.bg-banner {
+            gap: 0;
+        }
+    }
+}

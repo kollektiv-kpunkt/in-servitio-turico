@@ -1,0 +1,57 @@
+.ist-button {
+    padding: 0.5em 0.5em;
+    border: 0.2em var(--bordercolor) solid;
+    display: inline-block;
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor);
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 0.8;
+
+    --bordercolor: var(--spred);
+    --backgroundcolor: var(--spred);
+    --textcolor: var(--spred-10);
+
+    transition: 0.125s ease filter, 0.125s ease opacity;
+
+    &.ist-button-neg {
+        --bordercolor: white;
+        --backgroundcolor: white;
+        --textcolor: var(--spred);
+    }
+
+    &.ist-button-line {
+        --backgroundcolor: transparent;
+        --textcolor: var(--bordercolor);
+    }
+
+    &.ist-button-line-fill {
+        --bordercolor: var(--textcolor);
+    }
+
+    a {
+        background-image: none;
+
+        &:hover {
+            color: var(--textcolor);
+        }
+    }
+}
+
+.ist-button:hover {
+    filter: brightness(1.15) opacity(0.75);
+}
+
+.ist-button.ist-button-next::after {
+    content: "\203a";
+    font-size: 2em;
+    line-height: 0;
+    margin-left: 0.2em;
+    display: inline-block;
+    transition: 0.125s ease transform;
+    transform: translateY(0.09em);
+}
+
+.ist-button.ist-button-next:hover::after {
+    transform: translateY(0.09em) translateX(0.15em);
+}

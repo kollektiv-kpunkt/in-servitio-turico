@@ -1,0 +1,33 @@
+div[data-block-name="core/paragraph"] {
+    .ist-block-content {
+        max-width: 900px;
+    }
+
+    &+& {
+        margin-top: 0.8em;
+    }
+}
+
+.ist-block-wrapper {
+    width: 100%;
+
+    .align-center {
+        align-self: center;
+    }
+
+    &[data-block-name="core/column"] {
+        .md-container {
+            max-width: 100%;
+        }
+
+        @media (max-width: 781px) {
+            [data-block-name="core/image"] .md-container {
+                max-width: 480px;
+            }
+        }
+    }
+}
+
+.wp-block-image {
+    margin: 0;
+}

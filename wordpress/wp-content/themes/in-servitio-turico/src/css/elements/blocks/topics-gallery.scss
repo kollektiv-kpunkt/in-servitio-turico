@@ -1,0 +1,104 @@
+.ist-topics-gallery-wrapper {
+    .ist-topics-gallery-container {
+        position: relative;
+        padding-bottom: calc(100% / 4 * 3);
+        overflow: hidden;
+        -webkit-mask-image: -webkit-gradient(linear, left 80%, left 95%, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+
+        @media (max-width: 1080px) {
+            padding-bottom: calc(100% / 5 * 4);
+        }
+
+        @media (max-width: 780px) {
+            padding-bottom: 100%;
+        }
+
+        @media (max-width: 680px) {
+            padding-bottom: calc(100% / 3 * 5);
+        }
+
+        .ist-gallery-more-button {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .ist-topics-gallery {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            --gap: 3rem;
+            --cols: 2;
+
+            @media (max-width: 1080px) {
+                --gap: 2rem;
+                column-gap: var(--gap);
+            }
+
+            .ist-topics-gallery-niche {
+                width: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+                @media (max-width: 680px) {
+                    width: 100%;
+                }
+
+
+
+                .ist-topic {
+                    position: relative;
+                    padding-bottom: calc(100% / 2685 * 1280);
+                    overflow: hidden;
+
+                    @media (max-width: 1080px) {
+                        padding-bottom: 75%;
+                    }
+
+                    @media (max-width: 780px) {
+                        padding-bottom: 100%;
+                    }
+
+                    @media (max-width: 680px) {
+                        padding-bottom: calc(100% / 2685 * 1280);
+                    }
+
+                    .ist-topic-img {
+                        .ist-img-overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: black;
+                            opacity: 0.2;
+                        }
+                        img {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: top center;
+                            filter: blur(4px);
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    .ist-topic-content {
+                        width: 50%;
+                        position: absolute;
+                        bottom: 1rem;
+                        left: 1rem;
+
+                        @media (max-width: 1080px) {
+                            width: 80%;
+                        }
+
+                        @media (max-width: 780px) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

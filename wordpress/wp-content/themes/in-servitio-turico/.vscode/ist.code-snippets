@@ -4,7 +4,7 @@
             "template-part"
         ],
         "body": [
-            "get_template_part( \"template-parts/elements/${0:template name}\"); ",
+            "get_template_part( \"template-parts/${1:elements}/${2:template name}\"); ",
         ],
         "description": "Get a template part from the theme."
     },
@@ -69,7 +69,7 @@
         ],
         "body": [
             "@media (max-width: ${1:width}px) {",
-            "    ${1:style}",
+            "    ${2:style}",
             "}",
         ],
         "description": "Add mobile styles special."

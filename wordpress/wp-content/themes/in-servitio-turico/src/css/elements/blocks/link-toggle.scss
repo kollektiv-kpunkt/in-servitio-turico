@@ -1,0 +1,27 @@
+.ist-block-wrapper[data-block-name="acf/link-toggle"] {
+
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+
+    &.text-white {
+        border-color: #ffffff;
+    }
+
+    &+& {
+        border-top: none;
+    }
+
+    svg.feather {
+        transition: 0.125s ease-in-out transform;
+    }
+
+    &:hover svg.feather {
+
+        &.feather-download {
+            transform: scale(1.1);
+        }
+        &.feather-chevron-right {
+            transform: translateX(0.5rem);
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import "fonts/fonts.scss";
+
+$font-family-base : "Inter", sans-serif;
+
+html {
+    font-size: clamp(16px, 1vw, 19px);
+
+    @media (max-width: 780px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 14px;
+    }
+}
+
+
+body {
+    font-family: $font-family-base;
+    line-height: 1.33;
+}
+
+a:not(.ist-button):not(.ist-noline) {
+    color: var(--linkcolor);
+    line-height: 1;
+    padding: 0.15em;
+    background-image: linear-gradient(to right, var(--linkcolor) 0, var(--linkcolor) 100%);
+    background-size: 100% 0.15em;
+    background-repeat: repeat-x;
+    background-position: bottom;
+
+    --linkcolor: var(--spred);
+    --linkhover: white;
+
+    transition: 0.125s ease-in-out background-size, 0.125s ease-in-out color;
+}
+
+a:not(.ist-button):not(.ist-noline):hover {
+    background-size: 100% 100%;
+    color: var(--linkhover);
+}
+
+.text-white a {
+    --linkcolor: white !important;
+    --linkhover: var(--spred) !important;
+}
+
+// Headers
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1;
+}
+
+p+p {
+    margin-top: 0.8em;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.75rem;
+}
+
+h3 {
+    font-size: 2.25rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+h6 {
+    font-size: 1.7rem;
+}
+
+b {
+    font-weight: 600;
+}
