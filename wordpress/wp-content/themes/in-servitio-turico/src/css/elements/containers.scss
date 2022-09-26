@@ -28,3 +28,13 @@
         --banner-color : var(--spblack);
     }
 }
+
+.col1-container {
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1533px) {
+        max-width: 90%;
+    }
+}

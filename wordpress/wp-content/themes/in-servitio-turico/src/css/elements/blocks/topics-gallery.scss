@@ -17,6 +17,10 @@
             padding-bottom: calc(100% / 3 * 5);
         }
 
+        @media (max-width: 480px) {
+            padding-bottom: calc(100% / 3 * 7);
+        }
+
         .ist-gallery-more-button {
             position: absolute;
             bottom: 0;
@@ -60,6 +64,10 @@
 
                     @media (max-width: 680px) {
                         padding-bottom: calc(100% / 2685 * 1280);
+                    }
+
+                    @media (max-width: 480px) {
+                        padding-bottom: calc(100% / 4 * 3);
                     }
 
                     .ist-topic-img {

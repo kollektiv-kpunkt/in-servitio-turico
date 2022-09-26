@@ -69,3 +69,19 @@
     src: url("Inter-BoldItalic.woff2?v=3.19") format("woff2"),
         url("Inter-BoldItalic.woff?v=3.19") format("woff");
 }
+
+@font-face {
+    font-family: 'CrimsonPro';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url("CrimsonPro-SemiBoldItalic.woff2?v=3.19") format("woff2");
+}
+
+@font-face {
+    font-family: 'CrimsonPro';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("CrimsonPro-SemiBold.woff2?v=3.19") format("woff2");
+}

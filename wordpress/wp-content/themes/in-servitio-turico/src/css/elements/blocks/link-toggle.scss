@@ -1,14 +1,18 @@
 .ist-block-wrapper[data-block-name="acf/link-toggle"] {
 
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
+    .ist-block-content {
+        border-top: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+    }
 
     &.text-white {
-        border-color: #ffffff;
+        .ist-block-content {
+            border-color: #ffffff;
+        }
     }
 
     &+& {
-        border-top: none;
+        margin-top: -2px;
     }
 
     svg.feather {

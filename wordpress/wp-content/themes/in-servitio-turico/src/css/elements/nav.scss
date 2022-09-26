@@ -15,6 +15,12 @@
         display: flex;
         column-gap: 2.5rem;
         align-items: center;
+        list-style: none;
+        margin-left: 0;
+
+        li+li {
+            margin-top: 0;
+        }
 
         .ist-button {
             margin-right: -1rem;
@@ -57,14 +63,22 @@
         background-blend-mode: hard-light;
         opacity: var(--navopacity);
         z-index: -1;
+        transition: 0.25s ease background, 0.25s ease opacity;
     }
+
+    transition: 0.25s ease transform;
 
     --navbg : linear-gradient(180deg, #000000 16.15%, rgba(0, 0, 0, 0) 100%);
     --navopacity : 0.4;
 
-    &.scrollbar {
+    &.bg-spred {
         --navbg: var(--spred);
         --navopacity: 1;
+    }
+
+    &.scrollup {
+        transform: translateY(-100%);
+        --navopacity: 0;
     }
 }
 
@@ -75,6 +89,16 @@
     opacity: 0;
     transform: translateY(-100%);
     transition: 0.25s ease-in-out transform, 0.25s ease-in-out opacity;
+    padding-top: 4.5rem;
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    li+li {
+        margin-top: 0;
+    }
 
     .ist-nav-mobilemenu-container {
         width: 480px;

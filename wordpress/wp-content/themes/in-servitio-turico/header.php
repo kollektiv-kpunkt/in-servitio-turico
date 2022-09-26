@@ -5,6 +5,7 @@ get_template_part( "template-parts/elements/credits");
 <!DOCTYPE html>
 <?php
 $rootclasses = "ist-root";
+$rootclasses .= " ist-type-" . get_post_type( );
 if (is_front_page()) {
     $rootclasses .= " ist-frontpage";
 }
@@ -17,6 +18,11 @@ if (is_front_page()) {
     <?php
     wp_head();
     ?>
+    <style>
+        html {
+            margin-top: 0 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- ist-nav-mobilemenu-open -->

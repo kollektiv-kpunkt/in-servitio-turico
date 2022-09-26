@@ -1,0 +1,48 @@
+.ist-toggle-details {
+    width: 100%;
+    border: 2px solid var(--spred-120);
+    border-radius: 2px;
+    padding: 1rem;
+    background-color: var(--spred);
+    transition: 0.25s ease background-color;
+
+    summary {
+        .ist-toggle-title {
+            max-width: 80%;
+        }
+
+        list-style: none;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .ist-toggle-icon {
+        font-size: 4rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        line-height: 0.28;
+        transform-origin: 0.65rem 0.65rem;
+        transition: 0.25s ease transform;
+    }
+
+    &[open] {
+        background-color: white;
+
+        .ist-toggle-summary {
+            color: var(--spred);
+        }
+
+        .ist-toggle-icon {
+            transform: rotate(-180deg);
+        }
+
+        .ist-toggle-content {
+            color: black
+        }
+    }
+}

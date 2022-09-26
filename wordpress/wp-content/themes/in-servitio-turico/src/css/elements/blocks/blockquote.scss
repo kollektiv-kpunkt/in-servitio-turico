@@ -1,0 +1,52 @@
+div[data-block-name="core/quote"] {
+
+    blockquote {
+        position: relative;
+        font-family: 'Barlow Condensed', sans-serif;
+        align-self: center;
+        max-width: 750px;
+        margin-bottom: 4rem;
+
+        p {
+            font-family: "CrimsonPro", serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 1.15;
+            margin: 0;
+            border: 2px solid var(--spred);
+            padding: 25px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                border: 2px solid var(--spred);
+                border-radius: 0 3rem 0 0;
+                width: 4rem;
+                height: 4rem;
+                bottom: calc(-4rem + 2px);
+                left: 2rem;
+                border-bottom: none;
+                border-left: none;
+                z-index: 3;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 6rem;
+                border: 6px solid #ffffff;
+                bottom: -3px;
+                left: 2rem;
+                z-index: 2;
+            }
+        }
+
+        cite {
+            position: absolute;
+            font-style: normal;
+            bottom: -3.5rem;
+            left: 8rem;
+        }
+    }
+}

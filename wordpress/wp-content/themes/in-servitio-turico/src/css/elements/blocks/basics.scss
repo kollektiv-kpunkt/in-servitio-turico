@@ -8,6 +8,12 @@ div[data-block-name="core/paragraph"] {
     }
 }
 
+.col1-container {
+    .ist-block-content {
+        max-width: 900px;
+    }
+}
+
 .ist-block-wrapper {
     width: 100%;
 
@@ -16,7 +22,7 @@ div[data-block-name="core/paragraph"] {
     }
 
     &[data-block-name="core/column"] {
-        .md-container {
+        .md-container, .col1-container {
             max-width: 100%;
         }
 
@@ -30,4 +36,8 @@ div[data-block-name="core/paragraph"] {
 
 .wp-block-image {
     margin: 0;
+}
+
+.md-container .md-container {
+    max-width: 100%;
 }
