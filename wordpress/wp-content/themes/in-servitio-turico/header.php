@@ -22,6 +22,9 @@ if (is_front_page()) {
         html {
             margin-top: 0 !important;
         }
+        #wpadminbar {
+            display: none;
+        }
     </style>
 </head>
 <body>
