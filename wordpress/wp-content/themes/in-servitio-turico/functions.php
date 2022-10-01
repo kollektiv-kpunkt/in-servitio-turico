@@ -152,6 +152,16 @@ function ist_blocktypes() {
             'icon'              => '',
             'keywords'          => array("toggle", "detail"),
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'constituencies',
+            'title'             => __('Constituencies'),
+            'description'       => __('Display a map of the consitutencies'),
+            'render_template'   => 'template-parts/blocks/constituencies.php',
+            'category'          => 'ist',
+            'icon'              => '',
+            'keywords'          => array("constituencies", "map"),
+        ));
     }
 }
 
@@ -161,7 +171,8 @@ add_filter( 'render_block', 'ist_wrap_blocks', 10, 2 );
 function ist_wrap_blocks( $block_content, $block ) {
     $containers = [
         "fw" => [
-            "acf/heroine"
+            "acf/heroine",
+            "core/buttons"
         ],
         "lg" => [
 
@@ -184,7 +195,12 @@ function ist_wrap_blocks( $block_content, $block ) {
         return;
     }
 
+    if ($block['blockName'] == "core/button") {
+        return $block_content;
+    }
+
     $containerClass = "";
+    $customClasses = "";
     foreach ($containers as $key => $value) {
         if (in_array($block['blockName'], $value)) {
             $containerClass = $key . "-container";
@@ -344,4 +360,17 @@ function the_breadcrumb()
         }
         echo '</div>';
     }
+}
+
+// Widgets
+
+add_action( 'widgets_init', 'ist_register_widgets' );
+
+function ist_register_widgets() {
+	register_sidebar( array(
+		'name'          => 'Footer Widget',
+		'id'            => 'footer_widget',
+		'before_widget' => '<div class="ist-footer-widget">',
+		'after_widget'  => '</div>'
+	) );
 }

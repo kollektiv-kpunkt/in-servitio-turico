@@ -18,6 +18,7 @@
   "dependencies": {
     "feather-icons": "^4.29.0",
     "normalize.css": "^8.0.1",
+    "tippy.js": "^6.3.7",
     "uuid": "^8.3.2",
     "vanilla-cookieconsent": "^2.8.0",
     "when-in-viewport": "^2.0.4"

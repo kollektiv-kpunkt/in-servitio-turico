@@ -20,7 +20,7 @@ body {
     line-height: 1.33;
 }
 
-a:not(.ist-button):not(.ist-noline) {
+a:not(.ist-button):not(.ist-noline):not(.wp-block-button__link) {
     color: var(--linkcolor);
     line-height: 1;
     padding: 0.15em;

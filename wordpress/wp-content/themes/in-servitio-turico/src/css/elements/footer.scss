@@ -1,0 +1,18 @@
+.ist-bottom-bar svg {
+    path {
+        fill: white;
+    }
+}
+
+.ist-footer-menu-wrapper {
+    ul {
+        margin-left: 0;
+        display: flex;
+        column-gap: 1rem;
+        list-style: none;
+
+        li {
+            margin: 0;
+        }
+    }
+}
