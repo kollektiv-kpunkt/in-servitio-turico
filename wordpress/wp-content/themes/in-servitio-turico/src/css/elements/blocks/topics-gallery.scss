@@ -4,6 +4,7 @@
         padding-bottom: calc(100% / 4 * 3);
         overflow: hidden;
         -webkit-mask-image: -webkit-gradient(linear, left 80%, left 95%, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+        transition: 0.5s ease-in-out padding-bottom, 0.5s ease-in-out -webkit-mask-image;
 
         @media (max-width: 1080px) {
             padding-bottom: calc(100% / 5 * 4);

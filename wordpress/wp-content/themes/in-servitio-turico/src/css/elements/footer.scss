@@ -16,3 +16,35 @@
         }
     }
 }
+
+@media (max-width: 780px) {
+    .ist-footer-wrapper {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1rem;
+    }
+
+    .ist-footer-widget [data-block-name="core/columns"] .wp-container-8 {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1rem;
+
+        .wp-block-button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .ist-footer-left-container {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        row-gap: 0.5rem;
+
+        svg {
+            margin-right: 0;
+
+        }
+    }
+}

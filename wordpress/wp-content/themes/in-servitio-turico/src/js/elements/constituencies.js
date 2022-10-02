@@ -4,7 +4,6 @@ import "tippy.js/animations/perspective.css";
 
 if (document.querySelector("g.ist-constituency")) {
   let constituencies = document.querySelectorAll("g.ist-constituency");
-  console.log(constituencies.length);
   constituencies.forEach((constituency) => {
     let name = constituency.getAttribute("data-constituency-name");
     tippy(constituency, {

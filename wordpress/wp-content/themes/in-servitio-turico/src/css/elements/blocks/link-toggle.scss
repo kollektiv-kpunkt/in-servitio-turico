@@ -3,6 +3,10 @@
     .ist-block-content {
         border-top: 2px solid #000000;
         border-bottom: 2px solid #000000;
+
+        .ist-link-toggle-content a p {
+            max-width: 80%;
+        }
     }
 
     &.text-white {

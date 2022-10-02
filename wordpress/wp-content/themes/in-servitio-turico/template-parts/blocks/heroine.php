@@ -48,16 +48,24 @@ $anliegens = [
                     <?php
                     $i = 0;
                     foreach ($anliegens as $anliegen) :
+                        $thumbnailID = get_post_thumbnail_id( $anliegen->ID);
+                        $thmb_src = wp_get_attachment_image_url( $thumbnailID, 'full' );
+                        $thmb_srcset = wp_get_attachment_image_srcset( $thumbnailID, 'full' );
                         $content = [
                             "slogan" => get_field("slogan", $anliegen->ID),
                             "title" => get_field("title", $anliegen->ID),
-                            "link" => get_permalink($anliegen->ID)
+                            "link" => get_permalink($anliegen->ID),
+                            "thumbnail" => [
+                                "src" => $thmb_src,
+                                "srcset" => $thmb_srcset,
+                                "alt" => $anliegen->post_title
+                            ]
                         ];
                         $attachment_id = get_field("preview_image", $anliegen->ID)["ID"];
                         $img_src = wp_get_attachment_image_url( $attachment_id, 'medium_large' );
                         $img_srcset = wp_get_attachment_image_srcset( $attachment_id, 'medium_large' );
                     ?>
-                    <div class="ist-fp-slide" data-slide-content='<?= base64_encode(json_encode($content)) ?>'>
+                    <div class="ist-fp-slide" data-slide-content='<?= base64_encode(json_encode($content)) ?>' data-slide-slug="<?= $anliegen->post_name ?>">
                         <div class="ist-fp-slide-preview">
                             <a href="<?= get_permalink($anliegen->ID) ?>" class="ist-noline flex">
                                 <img src="<?php echo esc_url( $img_src ); ?>"
@@ -93,7 +101,7 @@ $anliegens = [
                         $img_src = wp_get_attachment_image_url( $attachment_id, 'medium_large' );
                         $img_srcset = wp_get_attachment_image_srcset( $attachment_id, 'medium_large' );
                     ?>
-                    <div class="ist-fp-mobile-slide">
+                    <div class="ist-fp-mobile-slide" data-slide-slug="<?= $anliegen->post_name ?>">
                         <div class="ist-fp-mobile-preview">
                             <img src="<?php echo esc_url( $img_src ); ?>"
                                 srcset="<?php echo esc_attr( $img_srcset ); ?>"
@@ -110,15 +118,3 @@ $anliegens = [
         </div>
     </div>
 </div>
-
-<!-- <script>
-    const slides = document.querySelectorAll(".ist-fp-slide a");
-    slides.forEach((slide) => {
-        slide.addEventListener("click", (e) => {
-            e.preventDefault();
-            container = slide.parentElement.parentElement;
-            let content = JSON.parse(atob(container.getAttribute("data-slide-content")));
-            console.log(content);
-        });
-    });
-</script> -->
