@@ -252,8 +252,13 @@ function ist_wrap_blocks( $block_content, $block ) {
                 BREADCRUMBS
 =============================================*/
 //  to include in functions.php
-function the_breadcrumb()
+function the_breadcrumb($args = array())
 {
+    $args = wp_parse_args($args, array(
+        "text-color" => "text-spred",
+        "opacity" => "opacity-100"
+    ));
+
     $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
     $delimiter = '<i data-feather="arrow-right" class="inline h-4 w-4"></i>'; // delimiter between crumbs
     $home = get_bloginfo("name"); // text for the 'Home' link
@@ -265,10 +270,16 @@ function the_breadcrumb()
     $homeLink = get_bloginfo('url');
     if (is_home() || is_front_page()) {
         if ($showOnHome == 1) {
-            echo '<div id="crumbs" class="ist-breadcrumbs text-spred text-sm"><a href="' . $homeLink . '">' . $home . '</a></div>';
+            echo(
+                <<<EOD
+                <div id='crumbs' class='ist-breadcrumbs {$args["text-color"]} {$args["opacity"]} text-sm'><a href='{$homeLink}'>{$home}</a></div>
+                EOD);
         }
     } else {
-        echo '<div id="crumbs" class="ist-breadcrumbs text-spred text-sm"><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
+        echo(
+            <<<EOD
+            <div id='crumbs' class='ist-breadcrumbs {$args["text-color"]} {$args["opacity"]} text-sm'><a href='{$homeLink}'>{$home}</a> {$delimiter}
+            EOD);
         if (is_category()) {
             $thisCat = get_category(get_query_var('cat'), false);
             if ($thisCat->parent != 0) {
@@ -290,7 +301,10 @@ function the_breadcrumb()
             if (get_post_type() != 'post') {
                 $post_type = get_post_type_object(get_post_type());
                 $slug = $post_type->rewrite;
-                echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
+                echo(
+                    <<<EOD
+                    <a href="{$homeLink}/{$slug['slug']}/">{$post_type->labels->singular_name}</a>
+                    EOD);
                 if ($showCurrent == 1) {
                     echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
                 }
@@ -327,7 +341,11 @@ function the_breadcrumb()
             $breadcrumbs = array();
             while ($parent_id) {
                 $page = get_page($parent_id);
-                $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+                $permalink = get_permalink($page->ID);
+                $title = get_the_title($page->ID);
+                $breadcrumbs[] = <<<EOD
+                <a href="{$permalink}">{$title}</a>
+                EOD;
                 $parent_id  = $page->post_parent;
             }
             $breadcrumbs = array_reverse($breadcrumbs);
@@ -374,3 +392,213 @@ function ist_register_widgets() {
 		'after_widget'  => '</div>'
 	) );
 }
+
+// CPT
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Anliegen.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Anliegen", "in-servitio-turico" ),
+		"singular_name" => esc_html__( "Anliegen", "in-servitio-turico" ),
+		"menu_name" => esc_html__( "Zielgruppen", "in-servitio-turico" ),
+		"all_items" => esc_html__( "All Zielgruppen", "in-servitio-turico" ),
+		"add_new" => esc_html__( "Add new", "in-servitio-turico" ),
+		"add_new_item" => esc_html__( "Add new Zielgruppe", "in-servitio-turico" ),
+		"edit_item" => esc_html__( "Edit Zielgruppe", "in-servitio-turico" ),
+		"new_item" => esc_html__( "New Zielgruppe", "in-servitio-turico" ),
+		"view_item" => esc_html__( "View Zielgruppe", "in-servitio-turico" ),
+		"view_items" => esc_html__( "View Zielgruppen", "in-servitio-turico" ),
+		"search_items" => esc_html__( "Search Zielgruppen", "in-servitio-turico" ),
+		"not_found" => esc_html__( "No Zielgruppen found", "in-servitio-turico" ),
+		"not_found_in_trash" => esc_html__( "No Zielgruppen found in trash", "in-servitio-turico" ),
+		"parent" => esc_html__( "Parent Zielgruppe:", "in-servitio-turico" ),
+		"featured_image" => esc_html__( "Featured image for this Zielgruppe", "in-servitio-turico" ),
+		"set_featured_image" => esc_html__( "Set featured image for this Zielgruppe", "in-servitio-turico" ),
+		"remove_featured_image" => esc_html__( "Remove featured image for this Zielgruppe", "in-servitio-turico" ),
+		"use_featured_image" => esc_html__( "Use as featured image for this Zielgruppe", "in-servitio-turico" ),
+		"archives" => esc_html__( "Zielgruppe archives", "in-servitio-turico" ),
+		"insert_into_item" => esc_html__( "Insert into Zielgruppe", "in-servitio-turico" ),
+		"uploaded_to_this_item" => esc_html__( "Upload to this Zielgruppe", "in-servitio-turico" ),
+		"filter_items_list" => esc_html__( "Filter Zielgruppen list", "in-servitio-turico" ),
+		"items_list_navigation" => esc_html__( "Zielgruppen list navigation", "in-servitio-turico" ),
+		"items_list" => esc_html__( "Zielgruppen list", "in-servitio-turico" ),
+		"attributes" => esc_html__( "Zielgruppen attributes", "in-servitio-turico" ),
+		"name_admin_bar" => esc_html__( "Zielgruppe", "in-servitio-turico" ),
+		"item_published" => esc_html__( "Zielgruppe published", "in-servitio-turico" ),
+		"item_published_privately" => esc_html__( "Zielgruppe published privately.", "in-servitio-turico" ),
+		"item_reverted_to_draft" => esc_html__( "Zielgruppe reverted to draft.", "in-servitio-turico" ),
+		"item_scheduled" => esc_html__( "Zielgruppe scheduled", "in-servitio-turico" ),
+		"item_updated" => esc_html__( "Zielgruppe updated.", "in-servitio-turico" ),
+		"parent_item_colon" => esc_html__( "Parent Zielgruppe:", "in-servitio-turico" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "Anliegen", "in-servitio-turico" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "anliegen", "with_front" => true ],
+		"query_var" => true,
+		"menu_icon" => "dashicons-star-filled",
+		"supports" => [ "title", "editor", "thumbnail", "excerpt" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "anliegen", $args );
+
+	/**
+	 * Post Type: Bezirke.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Bezirke", "in-servitio-turico" ),
+		"singular_name" => esc_html__( "Bezirke", "in-servitio-turico" ),
+		"menu_name" => esc_html__( "Bezirke", "in-servitio-turico" ),
+		"all_items" => esc_html__( "All Bezirke", "in-servitio-turico" ),
+		"add_new" => esc_html__( "Add new", "in-servitio-turico" ),
+		"add_new_item" => esc_html__( "Add new Bezirke", "in-servitio-turico" ),
+		"edit_item" => esc_html__( "Edit Bezirke", "in-servitio-turico" ),
+		"new_item" => esc_html__( "New Bezirke", "in-servitio-turico" ),
+		"view_item" => esc_html__( "View Bezirke", "in-servitio-turico" ),
+		"view_items" => esc_html__( "View Bezirke", "in-servitio-turico" ),
+		"search_items" => esc_html__( "Search Bezirke", "in-servitio-turico" ),
+		"not_found" => esc_html__( "No Bezirke found", "in-servitio-turico" ),
+		"not_found_in_trash" => esc_html__( "No Bezirke found in trash", "in-servitio-turico" ),
+		"parent" => esc_html__( "Parent Bezirke:", "in-servitio-turico" ),
+		"featured_image" => esc_html__( "Featured image for this Bezirke", "in-servitio-turico" ),
+		"set_featured_image" => esc_html__( "Set featured image for this Bezirke", "in-servitio-turico" ),
+		"remove_featured_image" => esc_html__( "Remove featured image for this Bezirke", "in-servitio-turico" ),
+		"use_featured_image" => esc_html__( "Use as featured image for this Bezirke", "in-servitio-turico" ),
+		"archives" => esc_html__( "Bezirke archives", "in-servitio-turico" ),
+		"insert_into_item" => esc_html__( "Insert into Bezirke", "in-servitio-turico" ),
+		"uploaded_to_this_item" => esc_html__( "Upload to this Bezirke", "in-servitio-turico" ),
+		"filter_items_list" => esc_html__( "Filter Bezirke list", "in-servitio-turico" ),
+		"items_list_navigation" => esc_html__( "Bezirke list navigation", "in-servitio-turico" ),
+		"items_list" => esc_html__( "Bezirke list", "in-servitio-turico" ),
+		"attributes" => esc_html__( "Bezirke attributes", "in-servitio-turico" ),
+		"name_admin_bar" => esc_html__( "Bezirke", "in-servitio-turico" ),
+		"item_published" => esc_html__( "Bezirke published", "in-servitio-turico" ),
+		"item_published_privately" => esc_html__( "Bezirke published privately.", "in-servitio-turico" ),
+		"item_reverted_to_draft" => esc_html__( "Bezirke reverted to draft.", "in-servitio-turico" ),
+		"item_scheduled" => esc_html__( "Bezirke scheduled", "in-servitio-turico" ),
+		"item_updated" => esc_html__( "Bezirke updated.", "in-servitio-turico" ),
+		"parent_item_colon" => esc_html__( "Parent Bezirke:", "in-servitio-turico" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "Bezirke", "in-servitio-turico" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "bezirk", "with_front" => true ],
+		"query_var" => true,
+		"menu_icon" => "dashicons-location-alt",
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "bezirk", $args );
+
+	/**
+	 * Post Type: Kandidierende.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Kandidierende", "in-servitio-turico" ),
+		"singular_name" => esc_html__( "Kandi", "in-servitio-turico" ),
+		"menu_name" => esc_html__( "Kandidierende", "in-servitio-turico" ),
+		"all_items" => esc_html__( "All Kandidierende", "in-servitio-turico" ),
+		"add_new" => esc_html__( "Add new", "in-servitio-turico" ),
+		"add_new_item" => esc_html__( "Add new Kandi", "in-servitio-turico" ),
+		"edit_item" => esc_html__( "Edit Kandi", "in-servitio-turico" ),
+		"new_item" => esc_html__( "New Kandi", "in-servitio-turico" ),
+		"view_item" => esc_html__( "View Kandi", "in-servitio-turico" ),
+		"view_items" => esc_html__( "View Kandidierende", "in-servitio-turico" ),
+		"search_items" => esc_html__( "Search Kandidierende", "in-servitio-turico" ),
+		"not_found" => esc_html__( "No Kandidierende found", "in-servitio-turico" ),
+		"not_found_in_trash" => esc_html__( "No Kandidierende found in trash", "in-servitio-turico" ),
+		"parent" => esc_html__( "Parent Kandi:", "in-servitio-turico" ),
+		"featured_image" => esc_html__( "Featured image for this Kandi", "in-servitio-turico" ),
+		"set_featured_image" => esc_html__( "Set featured image for this Kandi", "in-servitio-turico" ),
+		"remove_featured_image" => esc_html__( "Remove featured image for this Kandi", "in-servitio-turico" ),
+		"use_featured_image" => esc_html__( "Use as featured image for this Kandi", "in-servitio-turico" ),
+		"archives" => esc_html__( "Kandi archives", "in-servitio-turico" ),
+		"insert_into_item" => esc_html__( "Insert into Kandi", "in-servitio-turico" ),
+		"uploaded_to_this_item" => esc_html__( "Upload to this Kandi", "in-servitio-turico" ),
+		"filter_items_list" => esc_html__( "Filter Kandidierende list", "in-servitio-turico" ),
+		"items_list_navigation" => esc_html__( "Kandidierende list navigation", "in-servitio-turico" ),
+		"items_list" => esc_html__( "Kandidierende list", "in-servitio-turico" ),
+		"attributes" => esc_html__( "Kandidierende attributes", "in-servitio-turico" ),
+		"name_admin_bar" => esc_html__( "Kandi", "in-servitio-turico" ),
+		"item_published" => esc_html__( "Kandi published", "in-servitio-turico" ),
+		"item_published_privately" => esc_html__( "Kandi published privately.", "in-servitio-turico" ),
+		"item_reverted_to_draft" => esc_html__( "Kandi reverted to draft.", "in-servitio-turico" ),
+		"item_scheduled" => esc_html__( "Kandi scheduled", "in-servitio-turico" ),
+		"item_updated" => esc_html__( "Kandi updated.", "in-servitio-turico" ),
+		"parent_item_colon" => esc_html__( "Parent Kandi:", "in-servitio-turico" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "Kandidierende", "in-servitio-turico" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "kandi", "with_front" => true ],
+		"query_var" => true,
+		"menu_icon" => "dashicons-universal-access",
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "kandi", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );

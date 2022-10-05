@@ -9,7 +9,12 @@ $anliegens = get_posts(array(
     <div class="ist-topics-gallery-container">
         <div class="ist-topics-gallery flex gap-x-12 gap-y-8 justify-center items-center flex-wrap">
             <div class="ist-topics-gallery-niche">
-                <h2 class="text-spred mb-0"><?= get_field("title") ?></h2>
+                <div class="ist-topic bg-spred">
+                    <div class="ist-topics-gallery-title text-white ">
+                        <h2 class="mb-2"><?= str_replace(" ", "</br>", get_field("title")) ?></h2>
+                        <p class="text-lg"><?= get_field("slogan")?></p>
+                    </div>
+                </div>
             </div>
             <?php
             foreach ($anliegens as $anliegen):

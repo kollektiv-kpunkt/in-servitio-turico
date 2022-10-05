@@ -1,0 +1,13 @@
+@import "./kandi-card.scss";
+
+.ist-kandigrid-wrapper {
+
+    .ist-kandigrid-inner {
+        --cols: 5;
+        --gap: 3rem;
+
+        .ist-kandi {
+            width: calc((100% - (var(--gap) * (var(--cols) - 1))) / var(--cols));
+        }
+    }
+}

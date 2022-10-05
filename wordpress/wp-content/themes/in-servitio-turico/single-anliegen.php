@@ -8,13 +8,13 @@ if ( have_posts() ) :
         if ( has_post_thumbnail() ) {
             get_template_part( "template-parts/elements/page-heroine", "", array(
                 "title" => get_field("title"),
-                "slogan" => get_field("slogan"),
+                "subtitle" => get_field("slogan"),
                 "image" => get_the_post_thumbnail_url()
             ));
         } else {
             get_template_part( "template-parts/elements/page-heroine", "", array(
                 "title" => get_field("title"),
-                "slogan" => get_field("slogan"),
+                "subtitle" => get_field("slogan"),
             ));
         }
         the_content();

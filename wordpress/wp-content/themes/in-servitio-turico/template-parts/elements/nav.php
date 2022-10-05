@@ -4,7 +4,7 @@ if (is_front_page( )) {
 } else if (has_post_thumbnail( )) {
     $navbg = "gradient";
 } else {
-    $navbg = "bg-spred";
+    $navbg = "bg-spred bg-nogradient";
 }
 ?>
 <div class="ist-nav-wrapper py-2 fixed w-full z-20 <?= $navbg ?>">

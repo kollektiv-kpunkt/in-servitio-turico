@@ -22,6 +22,25 @@
             "append": ""
         },
         {
+            "key": "field_633b11b7d8d65",
+            "label": "Slogan",
+            "name": "slogan",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6330b9030ddcf",
             "label": "More Button",
             "name": "more_button",
@@ -59,5 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664137561
+    "modified": 1664815550
 }

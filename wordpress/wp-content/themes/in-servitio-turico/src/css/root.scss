@@ -1,3 +1,11 @@
+// * {
+//     outline: 1px solid grey;
+// }
+
+html.noscroll {
+    overflow: hidden;
+}
+
 :root {
     --spred-120: #B60022;
     --spred-110: #CE0027;

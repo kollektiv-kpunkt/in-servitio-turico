@@ -1,0 +1,35 @@
+.ist-kandi-img {
+    position: relative;
+    padding-bottom: 100%;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.ist-kandi-quote {
+    font-family: "CrimsonPro", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 3.5rem;
+
+    &::before {
+        content: "«";
+        display: inline-block;
+        margin-right: -0.1em;
+    }
+
+    &::after {
+        content: "»";
+        display: inline-block;
+        margin-left: -0.1em;
+    }
+}
+
+.ist-kandi-details-wrapper {
+}

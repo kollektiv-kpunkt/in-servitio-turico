@@ -12,13 +12,15 @@ if (document.querySelector("g.ist-constituency")) {
     });
 
     constituency.addEventListener("click", (e) => {
-      let slug = constituency.getAttribute("data-ist-constituency-slug");
       e.preventDefault();
-      alert(
-        "You clicked on " +
-          name +
-          ". The link would take you to the page for that constituency. This functionality is not yet implemented."
-      );
+      let slug = constituency.getAttribute("data-ist-constituency-slug");
+      slug = slug.replace("_", "");
+      // if (slug.startsWith("zuerich")) {
+      //   let kreisNum = slug.split("-")[1].replace("_", "");
+      //   let slug = "zuerich-" + kreisNum;
+      // }
+      let url = "/bezirk/" + slug;
+      window.location.href = url;
     });
   });
 }
