@@ -29,6 +29,13 @@ function toggleKandiOn(kandiID) {
   let kandi = document.querySelector(
     ".ist-kandi[data-kandi-id='" + kandiID + "']"
   );
+  history.pushState(
+    {},
+    null,
+    "/kandi/" + kandi.getAttribute("data-kandi-slug")
+  );
+  let kandiArrow = kandi.querySelector(".ist-kandi-arrow");
+  kandiArrow.style.maxHeight = "2rem";
   let kandiDetailsWrapper = kandi.querySelector(".ist-kandi-details-wrapper");
   let kandiDetailsOuter = kandi.querySelector(".ist-kandi-details-outer");
   kandi.classList.add("ist-kandi-open");
@@ -43,6 +50,12 @@ function toggleKandiOff(kandiID) {
   let kandi = document.querySelector(
     ".ist-kandi[data-kandi-id='" + kandiID + "']"
   );
+  let bezirk = document
+    .querySelector(".ist-kandigrid-inner")
+    .getAttribute("data-bezirk");
+  history.pushState({}, null, "/bezirk/" + bezirk);
+  let kandiArrow = kandi.querySelector(".ist-kandi-arrow");
+  kandiArrow.style.maxHeight = "0rem";
   let kandiDetailsWrapper = kandi.querySelector(".ist-kandi-details-wrapper");
   let kandiDetailsOuter = kandi.querySelector(".ist-kandi-details-outer");
   kandi.classList.remove("ist-kandi-open");
@@ -61,3 +74,16 @@ function GridClass(type) {
     grid.classList.remove("ist-kandigrid-inner-open");
   }
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+  if (
+    document.querySelector(".ist-kandi") &&
+    window.location.href.includes("##kandi")
+  ) {
+    const slug = window.location.href.split("##kandi=")[1];
+    const kandi = document
+      .querySelector(`.ist-kandi[data-kandi-slug=${slug}]`)
+      .getAttribute("data-kandi-id");
+    toggleKandiOn(kandi);
+  }
+});

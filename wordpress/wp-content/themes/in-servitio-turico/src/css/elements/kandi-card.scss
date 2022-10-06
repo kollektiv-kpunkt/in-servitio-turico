@@ -3,7 +3,6 @@
 .ist-kandi-img {
     position: relative;
     padding-bottom: 100%;
-    transition: 0.5s ease filter;
 
     img {
         position: absolute;
@@ -20,17 +19,20 @@
     font-style: italic;
     font-weight: 600;
     font-size: 3.5rem;
+    line-height: 1;
 
-    &::before {
-        content: "«";
-        display: inline-block;
-        margin-right: -0.1em;
-    }
+    &:not(.ist-quote-has-paragraph), &.ist-quote-has-paragraph p {
+        &::before {
+            content: "«";
+            display: inline-block;
+            margin-right: -0.1em;
+        }
 
-    &::after {
-        content: "»";
-        display: inline-block;
-        margin-left: -0.1em;
+        &::after {
+            content: "»";
+            display: inline-block;
+            margin-left: -0.1em;
+        }
     }
 }
 
@@ -82,26 +84,23 @@
         .ist-kandi-details-wrapper {
             margin-left: var(--mLeft);
             width: 100vw;
-
-            .ist-kandi-details-outer {
-                padding-top: 4rem;
-                padding-bottom: 4rem;
-
-                @media (max-width: 980px) {
-                    padding-top: 3rem;
-                    padding-bottom: 3rem;
-                }
-
-                @media (max-width: 780px) {
-                    padding-top: 2rem;
-                    padding-bottom: 2rem;
-                }
-            }
         }
     }
 }
 
 .ist-kandi {
+    cursor: pointer;
+    transition: 0.5s ease filter;
+
+    .ist-kandi-arrow {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease max-height;
+
+        svg {
+            height: 2rem;
+        }
+    }
 
     .ist-kandi-details-wrapper {
         max-height: 0;
@@ -112,14 +111,12 @@
 
 .ist-kandigrid-inner-open {
     .ist-kandi {
-        .ist-kandi-img {
-            filter: grayscale(100%);
-        }
+        filter: grayscale(100%);
+        // .ist-kandi-img {
+        // }
 
         &.ist-kandi-open {
-            .ist-kandi-img {
-                filter: grayscale(0%);
-            }
+            filter: grayscale(0%);
         }
     }
 }

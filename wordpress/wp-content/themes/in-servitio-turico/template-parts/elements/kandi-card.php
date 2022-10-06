@@ -3,7 +3,7 @@ $kandi = $args["kandi"];
 $kandiID = $args["kandiID"];
 ?>
 
-<div class="ist-kandi relative" data-kandi-id="<?= $kandiID ?>">
+<div class="ist-kandi relative" data-kandi-id="<?= $kandiID ?>" data-kandi-slug="<?= $kandi->post_name ?>">
     <div class="ist-kandi-img-wrapper mb-6 relative">
         <div class="ist-kandi-img">
             <img src="<?= wp_get_attachment_url(get_field("portrait", $kandi->ID)["ID"]) ?>" alt="Portrait <?= get_the_title($kandi->ID) ?>" class="kandi-ist-img-figure">
@@ -22,12 +22,17 @@ $kandiID = $args["kandiID"];
     </div>
     <h3 class="ist-kandi-name text-2xl mb-0 text-spred"><?= get_field("vorname", $kandi->ID) ?> <?= get_field("rufname", $kandi->ID) ?> <?= get_field("nachname", $kandi->ID) ?></h3>
     <p class="ist-kandi-job"><?= get_field("berufsbezeichnung", $kandi->ID) ?></p>
+    <div class="ist-kandi-arrow justify-center flex mt-6">
+        <svg viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.9995 0L47.3008 54L0.698242 54L23.9995 0Z" fill="var(--spred-30)"/>
+        </svg>
+    </div>
 
     <div class="ist-kandi-details-wrapper">
         <div class="ist-kandi-details-outer">
             <div class="ist-kandi-details-inner py-12 bg-spred-30">
                 <div class="ist-kandi-container md-container">
-                    <div class="ist-kandi-quote text-spred-120 mb-10">
+                    <div class="ist-kandi-quote text-spred-120 mb-10<?= (strpos($kandi->post_content, "<!--") !== FALSE) ? " ist-quote-has-paragraph" : "" ?>">
                         <?= $kandi->post_content ?>
                     </div>
                     <h3 class="ist-kandi-name text-2xl mb-2 text-spred-120"><?= get_field("vorname", $kandi->ID) ?> <?= get_field("rufname", $kandi->ID) ?> <?= get_field("nachname", $kandi->ID) ?></h3>

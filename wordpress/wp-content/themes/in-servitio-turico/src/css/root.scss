@@ -2,6 +2,10 @@
 //     outline: 1px solid grey;
 // }
 
+html {
+    overflow-x: hidden;
+}
+
 html.noscroll {
     overflow: hidden;
 }

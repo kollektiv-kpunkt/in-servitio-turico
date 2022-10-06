@@ -71,12 +71,10 @@
     }
 
     transition: 0.25s ease transform;
-
-    --navbg : linear-gradient(180deg, #000000 16.15%, rgba(0, 0, 0, 0) 100%);
-    --navopacity : 0.4;
+    --navbg: var(--spred);
+    --navopacity : 0.75;
 
     &.bg-spred {
-        --navbg: var(--spred);
         --navopacity: 1;
     }
 

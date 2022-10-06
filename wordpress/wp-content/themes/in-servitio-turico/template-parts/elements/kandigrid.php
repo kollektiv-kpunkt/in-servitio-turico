@@ -1,7 +1,7 @@
 <div class="py-20">
     <div class="lg-container">
         <div class="ist-kandigrid-wrapper">
-            <div class="ist-kandigrid-inner flex flex-wrap">
+            <div class="ist-kandigrid-inner flex flex-wrap" data-bezirk="<?= $args["bezirk"]->post_name ?>">
                 <?php
                 $i = 0;
                 foreach($args["kandis"] as $kandi) :

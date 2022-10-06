@@ -38,7 +38,8 @@ if ( have_posts() ) :
         }
         the_content();
         get_template_part( "template-parts/elements/kandigrid", "", array(
-            "kandis" => $kandis
+            "kandis" => $kandis,
+            "bezirk" => $bezirk,
         ));
         ?>
         <div class="md-container">

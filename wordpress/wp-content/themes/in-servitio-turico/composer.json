@@ -12,6 +12,7 @@
   "require": {
     "vlucas/phpdotenv": "^5.4",
     "matomo/matomo-php-tracker": "^3.0",
-    "ramsey/uuid": "^4.4"
+    "ramsey/uuid": "^4.4",
+    "jaybizzle/crawler-detect": "^1.2"
   }
 }
