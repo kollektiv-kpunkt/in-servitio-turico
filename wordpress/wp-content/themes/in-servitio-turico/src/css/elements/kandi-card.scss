@@ -1,6 +1,9 @@
+@use "sass:math";
+
 .ist-kandi-img {
     position: relative;
     padding-bottom: 100%;
+    transition: 0.5s ease filter;
 
     img {
         position: absolute;
@@ -31,5 +34,92 @@
     }
 }
 
-.ist-kandi-details-wrapper {
+@for $i from 0 through 100 {
+    .ist-kandi[data-kandi-id="#{$i}"] {
+        $cols: 5;
+        $row: math.floor(math.div($i, $cols));
+        --gap: 3rem;
+        --offset: calc(#{$i} - (#{$cols} * #{$row}));
+        --contWidth: 1795px;
+        --width: calc((var(--contWidth) - (var(--gap) * (#{$cols} - 1))) / #{$cols});
+        --offLeft: calc(var(--offset) * (var(--width) + var(--gap)));
+        --mLeft: calc((((100vw - var(--contWidth)) / 2) + var(--offLeft)) * (-1));
+
+        @media (max-width: 1995px) {
+            --contWidth: 90vw;
+        }
+
+        @media (max-width: 1080px) {
+            $cols: 3;
+            $row: math.floor(math.div($i, $cols));
+            --gap: 2rem;
+            --offset: calc(#{$i} - (#{$cols} * #{$row}));
+            --width: calc((var(--contWidth) - (var(--gap) * (#{$cols} - 1))) / #{$cols});
+            --offLeft: calc(var(--offset) * (var(--width) + var(--gap)));
+            --mLeft: calc((((100vw - var(--contWidth)) / 2) + var(--offLeft)) * (-1));
+        }
+
+        @media (max-width: 780px) {
+            $cols: 2;
+            $row: math.floor(math.div($i, $cols));
+            --gap: 2rem;
+            --offset: calc(#{$i} - (#{$cols} * #{$row}));
+            --width: calc((var(--contWidth) - (var(--gap) * (#{$cols} - 1))) / #{$cols});
+            --offLeft: calc(var(--offset) * (var(--width) + var(--gap)));
+            --mLeft: calc((((100vw - var(--contWidth)) / 2) + var(--offLeft)) * (-1));
+        }
+
+        @media (max-width: 360px) {
+            $cols: 1;
+            $row: math.floor(math.div($i, $cols));
+            --gap: 1.5rem;
+            --offset: calc(#{$i} - (#{$cols} * #{$row}));
+            --width: calc((var(--contWidth) - (var(--gap) * (#{$cols} - 1))) / #{$cols});
+            --offLeft: calc(var(--offset) * (var(--width) + var(--gap)));
+            --mLeft: calc((((100vw - var(--contWidth)) / 2) + var(--offLeft)) * (-1));
+        }
+
+        .ist-kandi-details-wrapper {
+            margin-left: var(--mLeft);
+            width: 100vw;
+
+            .ist-kandi-details-outer {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+
+                @media (max-width: 980px) {
+                    padding-top: 3rem;
+                    padding-bottom: 3rem;
+                }
+
+                @media (max-width: 780px) {
+                    padding-top: 2rem;
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.ist-kandi {
+
+    .ist-kandi-details-wrapper {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease max-height;
+    }
+}
+
+.ist-kandigrid-inner-open {
+    .ist-kandi {
+        .ist-kandi-img {
+            filter: grayscale(100%);
+        }
+
+        &.ist-kandi-open {
+            .ist-kandi-img {
+                filter: grayscale(0%);
+            }
+        }
+    }
 }

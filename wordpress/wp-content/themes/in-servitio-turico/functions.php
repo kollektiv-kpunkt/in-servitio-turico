@@ -172,7 +172,8 @@ function ist_wrap_blocks( $block_content, $block ) {
     $containers = [
         "fw" => [
             "acf/heroine",
-            "core/buttons"
+            "core/buttons",
+            "core/block"
         ],
         "lg" => [
 

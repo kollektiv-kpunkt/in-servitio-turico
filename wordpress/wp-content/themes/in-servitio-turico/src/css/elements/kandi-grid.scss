@@ -5,6 +5,23 @@
     .ist-kandigrid-inner {
         --cols: 5;
         --gap: 3rem;
+        gap: var(--gap);
+
+        @media (max-width: 1080px) {
+            --cols: 3;
+            --gap: 2rem;
+        }
+
+        @media (max-width: 780px) {
+            --cols: 2;
+            --gap: 2rem;
+        }
+
+        @media (max-width: 360px) {
+            --cols: 1;
+            --gap: 1rem;
+        }
+
 
         .ist-kandi {
             width: calc((100% - (var(--gap) * (var(--cols) - 1))) / var(--cols));
