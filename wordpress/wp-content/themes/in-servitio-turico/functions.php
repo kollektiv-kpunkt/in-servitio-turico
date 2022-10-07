@@ -76,6 +76,14 @@ add_action( 'init', 'ist_menus' );
 // }
 // add_action( "admin_init", 'ist_enable_flush_rules' );
 
+// Shortcodes
+function ist_cookie_shortcode($atts, $content = null) {
+    ob_start();
+    echo('<a><button data-cc="c-settings">' . $content . '</button></a>');
+    return ob_get_clean();
+}
+
+add_shortcode('ist-cookie-settings', 'ist_cookie_shortcode');
 
 // ACF
 
@@ -121,6 +129,7 @@ function ist_blocktypes() {
             'category'          => 'ist',
             'icon'              => '',
             'keywords'          => array( 'heroine', 'frontpage' ),
+            'supports'          => array( 'anchor' => true )
         ));
 
         acf_register_block_type(array(
@@ -131,6 +140,7 @@ function ist_blocktypes() {
             'category'          => 'ist',
             'icon'              => '',
             'keywords'          => array("link", "toggle", "arrow"),
+            'supports'          => array( 'anchor' => true )
         ));
 
         acf_register_block_type(array(
@@ -141,6 +151,7 @@ function ist_blocktypes() {
             'category'          => 'ist',
             'icon'              => '',
             'keywords'          => array("topics", "gallery", "frontpage"),
+            'supports'          => array( 'anchor' => true )
         ));
 
         acf_register_block_type(array(
@@ -151,6 +162,7 @@ function ist_blocktypes() {
             'category'          => 'ist',
             'icon'              => '',
             'keywords'          => array("toggle", "detail"),
+            'supports'          => array( 'anchor' => true )
         ));
 
         acf_register_block_type(array(
@@ -161,6 +173,7 @@ function ist_blocktypes() {
             'category'          => 'ist',
             'icon'              => '',
             'keywords'          => array("constituencies", "map"),
+            'supports'          => array( 'anchor' => true )
         ));
     }
 }
@@ -233,12 +246,20 @@ function ist_wrap_blocks( $block_content, $block ) {
         $wrapperClass .= " align-{$block['attrs']['verticalAlignment']}";
     }
 
-    $debug = json_encode($block);
-    // <!-- <script>
+    // $debug = json_encode($block);
+    // echo("
+    // <script>
     //     console.log({$debug});
-    // </script> -->
+    // </script>
+    // ");
+
+    if (isset($block['attrs']['anchor'])) {
+        $anchor = " id='{$block['attrs']['anchor']}'";
+    } else {
+        $anchor = "";
+    }
     $block_content = <<<EOD
-    <div class="{$wrapperClass}" data-block-name='{$block["blockName"]}' >
+    <div class="{$wrapperClass}" data-block-name='{$block["blockName"]}'{$anchor}>
         <div class='{$containerClass}'>
             <div class="ist-block-content">
                 {$block_content}
@@ -447,7 +468,7 @@ function cptui_register_my_cpts() {
 		"rest_base" => "",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"rest_namespace" => "wp/v2",
-		"has_archive" => false,
+		"has_archive" => true,
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"delete_with_user" => false,
@@ -515,7 +536,7 @@ function cptui_register_my_cpts() {
 		"rest_base" => "",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"rest_namespace" => "wp/v2",
-		"has_archive" => false,
+		"has_archive" => true,
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"delete_with_user" => false,
@@ -583,7 +604,7 @@ function cptui_register_my_cpts() {
 		"rest_base" => "",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"rest_namespace" => "wp/v2",
-		"has_archive" => false,
+		"has_archive" => true,
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"delete_with_user" => false,

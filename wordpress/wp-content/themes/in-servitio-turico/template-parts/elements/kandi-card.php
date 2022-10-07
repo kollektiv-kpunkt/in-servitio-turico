@@ -6,7 +6,14 @@ $kandiID = $args["kandiID"];
 <div class="ist-kandi relative" data-kandi-id="<?= $kandiID ?>" data-kandi-slug="<?= $kandi->post_name ?>">
     <div class="ist-kandi-img-wrapper mb-6 relative">
         <div class="ist-kandi-img">
-            <img src="<?= wp_get_attachment_url(get_field("portrait", $kandi->ID)["ID"]) ?>" alt="Portrait <?= get_the_title($kandi->ID) ?>" class="kandi-ist-img-figure">
+            <?php
+            if (isset(get_field("portrait", $kandi->ID)["ID"])) {
+                $url = wp_get_attachment_url(get_field("portrait", $kandi->ID)["ID"]);
+            } else {
+                $url = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+            }
+            ?>
+            <img src="<?= $url ?>" alt="Portrait <?= get_the_title($kandi->ID) ?>" class="kandi-ist-img-figure" loading="lazy">
         </div>
         <?php
         if (isset(get_field("bisher", $kandi->ID)[0]) && get_field("bisher", $kandi->ID)[0] == "bisher") :
@@ -20,7 +27,7 @@ $kandiID = $args["kandiID"];
         endif
         ?>
     </div>
-    <h3 class="ist-kandi-name text-2xl mb-0 text-spred"><?= get_field("vorname", $kandi->ID) ?> <?= get_field("rufname", $kandi->ID) ?> <?= get_field("nachname", $kandi->ID) ?></h3>
+    <h3 class="ist-kandi-name text-2xl mb-0 text-spred"><?= str_replace("-", "&#8209", str_replace(" ", "&nbsp", get_field("vorname", $kandi->ID))) ?> <?= str_replace("-", "&#8209", str_replace(" ", "&nbsp", get_field("rufname", $kandi->ID))) ?> <?= str_replace("-", "&#8209", str_replace(" ", "&nbsp", get_field("nachname", $kandi->ID))) ?></h3>
     <p class="ist-kandi-job"><?= get_field("berufsbezeichnung", $kandi->ID) ?></p>
     <div class="ist-kandi-arrow justify-center flex mt-6">
         <svg viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">

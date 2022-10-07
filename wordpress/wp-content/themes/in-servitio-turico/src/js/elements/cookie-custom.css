@@ -1,0 +1,34 @@
+:root {
+    --cc-bg: white;
+    --cc-text: #000;
+    --cc-btn-primary-bg: var(--spred);
+    --cc-btn-primary-text: white;
+    --cc-btn-primary-hover-bg: var(--spred-120);
+    --cc-btn-secondary-bg: var(--spgrey);
+    --cc-btn-secondary-text: white;
+    --cc-btn-secondary-hover-bg: var(--spblack-90);
+    --cc-toggle-bg-off: var(--spgrey);
+    --cc-toggle-bg-on: var(--cc-btn-primary-bg);
+    --cc-toggle-bg-readonly: var(--spgrey-50);
+    --cc-toggle-knob-bg: #fff;
+    --cc-toggle-knob-icon-color: #ecf2fa;
+    --cc-block-text: var(--cc-text);
+    --cc-cookie-category-block-bg: #f0f4f7;
+    --cc-cookie-category-block-bg-hover: #e9eff4;
+    --cc-section-border: #f1f3f5;
+    --cc-cookie-table-border: #e9edf2;
+    --cc-overlay-bg: rgba(4, 6, 8, .85);
+    --cc-webkit-scrollbar-bg: #cfd5db;
+    --cc-webkit-scrollbar-bg-hover: #9199a0;
+}
+
+div#cc_div {
+    font-family: inherit;
+}
+
+div#c-ttl {
+    color: var(--spred-120);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
