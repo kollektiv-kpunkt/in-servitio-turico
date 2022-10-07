@@ -10,7 +10,9 @@ if (document.querySelector(".ist-kandi")) {
           .getAttribute("data-kandi-id");
         if (openKandi == kandiID) {
           toggleKandiOff(kandiID);
-          GridClass("off");
+          setTimeout(() => {
+            GridClass("off");
+          }, 600);
         } else {
           toggleKandiOff(openKandi);
           setTimeout(() => {
@@ -34,11 +36,11 @@ function toggleKandiOn(kandiID) {
     null,
     "/kandi/" + kandi.getAttribute("data-kandi-slug")
   );
+  kandi.classList.add("ist-kandi-open");
   let kandiArrow = kandi.querySelector(".ist-kandi-arrow");
   kandiArrow.style.maxHeight = "2rem";
   let kandiDetailsWrapper = kandi.querySelector(".ist-kandi-details-wrapper");
   let kandiDetailsOuter = kandi.querySelector(".ist-kandi-details-outer");
-  kandi.classList.add("ist-kandi-open");
   kandiDetailsWrapper.style.maxHeight = kandiDetailsOuter.offsetHeight + "px";
   setTimeout(() => {
     kandiDetailsWrapper.style.maxHeight = "unset";
@@ -58,10 +60,12 @@ function toggleKandiOff(kandiID) {
   kandiArrow.style.maxHeight = "0rem";
   let kandiDetailsWrapper = kandi.querySelector(".ist-kandi-details-wrapper");
   let kandiDetailsOuter = kandi.querySelector(".ist-kandi-details-outer");
-  kandi.classList.remove("ist-kandi-open");
   kandiDetailsWrapper.style.maxHeight = kandiDetailsOuter.offsetHeight + "px";
   setTimeout(() => {
     kandiDetailsWrapper.style.maxHeight = "0px";
+    setTimeout(() => {
+      kandi.classList.remove("ist-kandi-open");
+    }, 500);
   }, 100);
 }
 
@@ -85,5 +89,6 @@ window.addEventListener("DOMContentLoaded", function () {
       .querySelector(`.ist-kandi[data-kandi-slug=${slug}]`)
       .getAttribute("data-kandi-id");
     toggleKandiOn(kandi);
+    GridClass("on");
   }
 });
