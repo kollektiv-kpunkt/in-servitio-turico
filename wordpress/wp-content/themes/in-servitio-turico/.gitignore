@@ -1,7 +1,8 @@
 # IST
 /lib/acf/*
 !/lib/acf/acf-json
-/data
+/data/*
+
 
 # Composer
 vendor

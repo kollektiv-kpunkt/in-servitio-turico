@@ -4,11 +4,20 @@ if (isset($args["image"]) && $args["image"] != "") :
 ?>
     <div class="ist-pageheroine-with-image">
         <div class="ist-pageheroine-image">
+            <?php
+            $feaimg_scaling_width = get_field("feaimg_scaling_width");
+            if ($feaimg_scaling_width) :
+                ?>
+            <img class="ist-pageheroine-image-scaling" src="<?= $args["image"] ?>" alt="<?= $args["title"] ?>">
+            <img class="ist-pageheroine-image-bg" src="<?= $args["image"] ?>" alt="<?= $args["title"] ?>">
+            <?php
+            else : ?>
             <img src="<?= $args["image"] ?>" alt="<?= $args["title"] ?>">
+            <?php endif; ?>
             <div class="ist-pageheroine-overlay"></div>
         </div>
         <div class="ist-pageheroine-content-wrapper text-white">
-            <div class="ist-pageheroine-content">
+            <div class="ist-pageheroine-content<?= (!isset($args["subtitle"])) ? " ist-pageheroine-content-no-subtitle" : "" ?>">
                     <div class="md-container">
                     <h1 class="ist-pageheroine-title mb-2"><?= $args["title"] ?></h1>
                     <?php

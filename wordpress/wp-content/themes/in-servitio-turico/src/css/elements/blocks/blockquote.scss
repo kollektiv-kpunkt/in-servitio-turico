@@ -1,5 +1,9 @@
 div[data-block-name="core/quote"] {
 
+    .wp-block-quote .col1-container {
+        max-width: 100%;
+    }
+
     blockquote {
         position: relative;
         align-self: center;

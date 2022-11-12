@@ -27,7 +27,7 @@ if (is_front_page()) {
         }
     </style>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <!-- ist-nav-mobilemenu-open -->
     <nav class="ist-nav-outer">
         <?php

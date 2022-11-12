@@ -186,7 +186,8 @@ function ist_wrap_blocks( $block_content, $block ) {
         "fw" => [
             "acf/heroine",
             "core/buttons",
-            "core/block"
+            "core/block",
+            "core/list-item"
         ],
         "lg" => [
 
@@ -246,7 +247,7 @@ function ist_wrap_blocks( $block_content, $block ) {
         $wrapperClass .= " align-{$block['attrs']['verticalAlignment']}";
     }
 
-    // $debug = json_encode($block);
+    // $debug = json_encode($block_content);
     // echo("
     // <script>
     //     console.log({$debug});

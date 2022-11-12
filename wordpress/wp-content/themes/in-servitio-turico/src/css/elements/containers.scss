@@ -33,10 +33,10 @@
 .bg-banner {
     background-image: linear-gradient(0deg, white 2rem, var(--banner-color) 2rem, var(--banner-color) calc(100% - 2rem), white calc(100% - 2rem));
 
-    --banner-color : var(--spred);
+    --banner-color: var(--spred);
 
     &.banner-spblack {
-        --banner-color : var(--spblack);
+        --banner-color: var(--spblack);
     }
 }
 
