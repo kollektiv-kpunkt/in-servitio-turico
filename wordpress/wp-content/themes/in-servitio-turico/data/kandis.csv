@@ -1,0 +1,181 @@
+Bild;Neu/Bisher;Vorname;Rufname;Nachname;Wahlkreis;Listenplatz;Berufsbezeichnung;Quote;Jahrgang;Pronomen
+;1;Isabel;;Bartal;Zürich 7+8;1;Unternehmerin, Hochschuldozentin;Die beste Wahl für soziale Gerechtigkeit, bezahlbare Wohnungen und faire Löhne.;1964;
+;0;Jean-Daniel;;Strub;Zürich 7+8;2;;;;
+;0;Eva-Maria;;Würth;Zürich 7+8;3;Innovationsethiker, Geschäftsführer;Für einen Kanton Zürich, der entschlossen vorwärtsmacht: beim Klimaschutz, bei der sozialen Sicherheit, bei der Chancengerechtigkeit in der Bildung!;1975;
+;0;Leo;;Bauer;Zürich 7+8;4;Sekundarschullehrer;Für einen zukunftsgerichteten Kanton: Bildung für alle, effektiver Klimaschutz, sichere Velorouten.;1996;
+;0;Nadina;;Diday;Zürich 7+8;5;;;;
+;0;Urs;;Helfenstein;Zürich 7+8;6;Japanologe;Für kantonale Lösungen mit einer austarierten Mischung aus Wirtschaft, Umwelt- und Sozialpolitik. Für alle statt für wenige.;1975;
+;1;Sylvie;;Matter;Zürich 6+10;1;Mittelschullehrerin;Für eine Schule, in der die Fähigkeiten der Kinder entscheidend sind, nicht die soziale Herkunft.;1981;sie / ihr
+;1;Nicola;;Siegrist;Zürich 6+10;2;Angehender Geograph, Präsident JUSO Schweiz;Für eine konsequente und sozial gerechte Bekämpfung der Klimakrise! Wir ergreifen Partei für deine Zukunft.;1996;er / ihm
+;0;Roman;;Rossfeld;Zürich 6+10;3;Historiker;Für einen konsequenten Klimaschutz und ein vielfältiges und solidarisches Zürich!;1967;er / ihm
+;0;Renata;;Grünenfelder;Zürich 6+10;4;Pflegefachfrau Notfallpflege;Als Expertin Notfallpflege will ich eine starke Pflege und eine gesunde Umwelt für die Bevölkerung. Dafür setze ich mich ein.;1967;sie / ihr
+;0;Lynn;;Honegger;Zürich 6+10;5;Rechtsanwältin Asylwesen;Für eine gleichberechtigte Familienpolitik und Solidarität mit allen Menschen im Kanton Zürich.;1991;sie / ihr
+;0;Kevin;;Vettiger;Zürich 6+10;6;Informatik Analyst & Designer;Für ein sozialgerechtes und zukunftsfähiges Zürich, das sich alle leisten können.;1992;er / ihm
+;0;Barbara;;Dietrich;Zürich 6+10;7;Biologin;Bildung für alle für eine vielversprechende Zukunft! Ein würdiges Leben für alle Menschen in Zürich.;1969;sie/ihr
+;0;Michel;;Makhlouf;Zürich 6+10;8;Mathematiker;Lösungen finden, ohne Menschen auf der Strecke zu lassen - Egal ob Wohnungsnot, Klimakrise oder Prämienlast.;1994;er/ihm
+;1;Tobias;;Langenegger;Zürich 4+5;1;Ökonom, Co-Fraktionspräsident;Für einen solidarischen Kanton Zürich, der sich am Wohl der Schwächsten misst.;1985;
+;1;Nicola;;Yuste;Zürich 4+5;2;Politologin, Projektleiterin;Für ein Zürich, in dem alle Stimmen gehört werden - weil politische Teilhabe kein Privileg, sondern das Fundament unserer Demokratie ist.;1988;
+;0;Luisa;;Schwegler;Zürich 4+5;3;Juristin;Für ein Zürich, welches allen ein würdevolles Zuhause bietet und Menschen statt Profite fördert. Heute und in Zukunft.;1992;
+;0;Maria Rosa;;Joller;Zürich 4+5;4;Pflegefachfrau und Gesundheitsökonomin;Für eine starke Pflege.;1994;
+;0;Dimitri;;Witzig;Zürich 4+5;5;Jurist in Migrationsrecht und Sozialhilferecht;Für ein offenes und gerechtes Zürich: integrative Bildung, soziale Klimapolitik und faire Löhne.;1990;
+;0;Dominique;;Späth;Zürich 3+9;5;Mittelschullehrerin, Historikerin;Lieber Späth als nie.;1987;
+;0;Mandy;;Abou Shoak;Zürich 3+9;7;Co-Geschäftsführung Gewaltprävention, Sozialarbeiterin;Für Gleichheit durch Solidarität. Für Sicherheit durch Frieden. Für Freiheit durch den Abbau von Barrieren.;1989;
+;0;Rahel;;Habegger;Zürich 3+9;11;Juristin;Bezahlbarer Wohnraum und soziale Gerechtigkeit für alle.;1991;
+;1;Sibylle;;Marti;Zürich 3+9;1;Historikerin;Der bürgerliche Kanton verhindert fortschrittliche Projekte in der Stadt Zürich. Um das zu ändern, braucht es mehr SP im Kantonsrat.;1980;
+;0;Jakob;;Ehrensperger;Zürich 3+9;12;Executive Public Affairs;Mit durchdachten Lösungen mutig und neugierig in die Zukunft. Für ein bedürfnisreiches, nachhaltig modernes Zürich.;1993;
+;0;Simon;;Bock;Zürich 3+9;6;Projektleiter kantonale Gesundheitsplanung;Für eine gute und finanzierbare Gesundheitsversorgung für alle braucht es eine gezielte Förderung der Haus- und Kinderärzt*innen.;1988;
+;0;Myrta;;Grubenmann;Zürich 3+9;9;;;1995;
+;0;Gregory;;Germann;Zürich 3+9;10;Public Affairs Klimapolitik bei swisscleantech;Für einen Kanton Zürich, der den Klimawandel als die grösste Krise unserer Zeit anerkennt - und auch so handelt.;1994;
+;1;Pia;;Ackermann;Zürich 3+9;3;Physiotherapeutin;Für einen solidarischen Kanton Zürich, in dem alle guten Zugang zur Gesundheitsversorgung haben.;1988;
+;0;Thomas;;Reiss;Zürich 3+9;8;Politologe;39% des CO2 im Kanton Zürich werden vom Verkehr verursacht. Für eine sozial gerechte Verkehrswende, die ihren Namen verdient!;1992;
+;0;Matyas;;Sagi Kiss;Zürich 3+9;4;;;1983;
+;0;Alan;;Sangines;Zürich 3+9;2;Kindesverfahrensvertreter, Beistand;Für eine starke städtische Stimme im Kantonsrat im Einsatz für einen sozialen, lebenswerten und fortschrittlichen Kanton für alle.;1986;
+;1;Monika          ;;Wicki;Zürich 11+12;1;Professorin;Bildung für alle und der Schutz des Klimas sind die besten Investitionen für die Zukunft.;1967;
+;1;Birgit       ;;Tognella-Geertsen;Zürich 11+12;2;Dipl. Betriebswitschafterin HF;Für ein gutes, offenes und vorurteilsloses Zusammenleben im Kanton Zürich.;1967;Sie/ihr
+;1;Felix        ;;Hoesch;Zürich 11+12;3;Verkehrsplaner, Informatiker;Für lebenswerte Plätze und Strassen - darum weniger privaten Autoverkehr.;1970;Er/ihm
+;0;Chiara;;Bono;Zürich 11+12;4;;;1996;
+;0;Karin;;Saxer;Zürich 11+12;5;Heilpädagogin, Schulleiterin;Für eine starke Bildung, für ein gutes Gesundheitswesen, für faire Arbeitsbedingungen und genug bezahlbare Wohnungen.;1972;Sie/ihr
+;0;Oliver;;Frei;Zürich 11+12;6;Verkehrsplaner;Mit bezahlbaren Wohnungen, einem attraktiven öV- und Velonetz sowie mehr Naturschutz einen lebenswerten und klimafreundlichen Kanton Zürich schaffen!;1988;
+;0;Christian;;Iten;Zürich 11+12;7;Kommunikationsberater;Für soziale Sicherheit. Damit alle in der Gesellschaft ihren Platz haben. Vor allem in Zeiten steigender Preise und wirtschaftlicher Unsicherheiten.;1977;
+;0;Mariem;;Fiadjigbe Kekić;Zürich 11+12;8;Senior Project Manager;Mein Zürich spricht alle Sprachen!;1981;
+;0;Niklaus;;Heiri;Zürich 11+12;9;Web-Entwickler;Für ein Zürich, wo wir alle gleich viel wert sind - unabhängig vom Bankkonto!;1990;
+;0;Alexander Robert;;Herren;Zürich 11+12;10;Doktorand Altertumswissenschaft;Grenzenlos, solidarisch, feministisch handeln!;1994;
+;0;Monika;;Suter;Zürich 11+12;11;Freischaffende Künstlerin;Ich will ein solidarisches Zürich, in dem alle gleichberechtigt sind und der Zugang zu Kunst, Kultur und Bildung für alle möglich ist.;1971;
+;0;Eric;;Franklin;Zürich 11+12;12;Lehrer, Radiomacher;;1986;
+;1;Andrew;;Katumba;Zürich 1+2;1;Unternehmer;Mitenand für Züri. Für einen starken Kanton Zürich, den alle mitgestalten.;1971;
+;0;Marion;;Schmid;Zürich 1+2;2;Betriebsökonomin,Geschäftsführerin;Für ein verlässliches Gesundheitswesen und eine starke Pflege. Für Gleichstellung und Chanchengerechtigkeit. Für konsequenten Klimaschutz.;1980;sie
+;0;Lara;;Can;Zürich 1+2;3;Angehende Ökonomin;;1997;
+;0;Felix;;Stocker;Zürich 1+2;4;Mathematiker, Pianist;Für einen sozialen Kanton Zürich! Für mehr Fairness in Wirtschaft und Gesellschaft!;1984;
+;0;Christina;;Horisberger;Zürich 1+2;5;Fachjournalistin, Dozentin;;1966;
+;1;Andreas;;Daurù;Winterthur Stadt;1;Pflegefachmann HF, Projektleiter;Für einen Service Public, der diese Bezeichnung verdient!;1979;
+;0;Lea;;Jacot;Winterthur Stadt;8;;;;
+;0;Michael;;Stampfli;Winterthur Stadt;5;;;;
+;0;Brankica;;Kupresak Walden;Winterthur Stadt;6;;;;
+;0;Alfred;;Ngoyi Wa Mwanza;Winterthur Stadt;11;;;;
+;0;Priska;;Lötscher;Winterthur Stadt;3;Juristin;Für einen ökologischen, solidarischen und fortschrittlichen Kanton Zürich, in dem gross und klein Platz hat.;1990;
+;0;Elif;;Akyol;Winterthur Stadt;9;;Ich trete für einen Kanton ein, in welchem alle Menschen unabhängig ihrer Herkunft, Religion, oder ihres Handicaps Platz haben.;1996;
+;0;Lena;;Schwarz;Winterthur Stadt;12;;;;
+;0;Valeria;;Muster;Winterthur Stadt;4;Blasinstrumentenreperateurin;Eine junge Stimme für eine lebenswerte Zukunft für alle Generationen: chancengleich und klimagerecht!;2001;
+;0;Melissa;;Gianni;Winterthur Stadt;10;Public Relations Spezialistin;Für ein ein vielfältiges und bezahlbares Zürich.;1990;
+;1;Roland;;Kappeler;Winterthur Stadt;2;Ökonom, Dr. oec., dipl. Handelslehrer;Guter Service public, faire Löhne und bezahlbares Wohnen für alle! In Winterthur, im Kanton Zürich, überall.;1958;
+;0;Luca;;Tschan;Winterthur Stadt;7;Mitarbeiter Finanzen;Für einen ökologischen, sozialen und modernen Kanton, in dem alle gleichberechtigt leben können.;1991;
+;0;Jan;;Schellenberger;Winterthur Stadt;13;Kinderarzt;Für eine gesunde Entwicklung unserer Gesellschaft. Für eine echte Unterstützung von Kindern und Jugendlichen.;1968;
+;1;Theres;;Agosti Monn;Winterthur Land;1;Schulleiterin, Beraterin;Für eine kluge Verdichtung, den Schutz intakter Landschaften und die Förderung der Biodiversität.;1961;
+;0;Monika;;Di Benedetto;Winterthur Land;3;Marketingfachfrau, Doula Geburtsbegleiterin;Jeden Tag sind Frauen von Gewalt und Übergriffen betroffen. Auch unter der Geburt. Dass sich das ändert, dafür setze ich mich ein.;1976;
+;0;Felix;;Caduff;Winterthur Land;6;lic. phil. I;Das Gebot der Stunde heisst Abkehr von der Wachstumsideologie und Wandel der Wirtschaft in Richtung Nachhaltigkeit. Für Klima, Umwelt und Soziales.;1953;
+;0;Patricia;;Heuberger;Winterthur Land;7;Geografin;Für einen Kanton Zürich, in dem auch die ländlichen Regionen ernst genommen werden.;1979;
+;0;Stephanie;;Hugentobler;Winterthur Land;2;;;;
+;0;Hüseyin;;At;Winterthur Land;4;;;1980;
+;0;Manuela;;Kindlimann;Winterthur Land;5;;;1987;
+;0;Patricia;;Bernet;Uster;4;;;;
+;1;Leandra;;Columberg;Uster;2;Studentin Rechtswissenschaften, Geschäftsführerin DJZ;Für eine konsequente, solidarische Politik, Chancengleichheit in der Bildung und gesellschaftliche Teilhabe für alle.;1999;
+;1;Stefan;;Feldmann;Uster;1;;;;
+;0;Anja;;Gada;Uster;7;Kampagnenleiterin, Studentin;Unsere Zukunft ist wählbar. Sie ist solidarisch, ökologisch, vielfältig und radikal anders.;2002;
+;0;Benjamin;;Goldschmidt;Uster;11;;;;
+;0;Christian;;Gross;Uster;16;Szenischer Geschichtsvermittler, Gemeinderat Dübendorf;Für eine vernünftige Finanzpolitik statt Steuergeschenken für Konzerne.;1991;
+;0;Ivo;;Hasler;Uster;3;Architekt;Für mehr zahlbaren Wohnraum – gegen den Ausverkauf unserer Lebensräume!;1979;
+;0;Nadia;;Kuhn;Uster;8;;;;
+;0;Gian;;Lusti;Uster;12;Student Politologie;Mit geballter Faust gegen die unsichtbare Hand - Radikal für das schöne Leben für alle.;2002;
+;0;Urs ;;Menet;Uster;14;Werkzeugmacher, pensioniert;Soziales Denken und Handeln sind mir wichtig – um den Gegenpool zur bürgerlichen Mehrheit zu stärken, engagiere ich mich.;1957;
+;0;Ali;;Özcan;Uster;9;Projektleiter NDS HF;Für eine qualitativ hochstehende Gesundheitsversorgung, auch für die zunehmende Zahl älterer und chronisch kranker Patientinnen und Patienten.;1974;
+;0;Lisa;;Schweizer;Uster;5;Protokollführerin, Studentin;Eine junge, feministische Stimme für mehr Menschlichkeit und Solidarität. Weg von Ausbeutung hin zu Chancengerechtigkeit.;1999;
+;0;Susanne;;Schweizer;Uster;10;;;;
+;0;Matthias;;Stammbach;Uster;6;;;;
+;0;Christina;;Zbinden;Uster;15;;;;
+;0;Franziska;;Ziltener;Uster;13;Sachbearbeiterin;Fairness, Gerechtigkeit, Solidarität. Sind mir wichtig.;1962;
+;0;Annina;;Annaheim;Pfäffikon;3;Linienpilotin;Wir brauchen eine anständige Entlöhnung für alle und mehr bezahlbaren Wohnraum, damit alle an einem lebendigen Bezirk teilhaben können.;1974;
+;0;Marc;;Grosspietsch;Pfäffikon;2;;;;
+;0;Maxim;;Morskoi;Pfäffikon;4;;;;
+;0;Reha;;Özkarakas;Pfäffikon;6;Product Manager, Telekommunikation;Bildung, Bildung, Bildung! Als Schulpfleger sind mir die gesunde Entwicklung, Chancengleichheit und qualitativ hohe Bildung ein grosses Anliegen.;1987;
+;1;Brigitte;;Röösli;Pfäffikon;1;Pflegefachfrau, Erwachsenenbildnerin;Ich setze mich für eine umfassende und gute Pflege ein - mit Personal, welches sich gut erholen kann und dadurch motiviert und engagiert arbeitet!;1963;
+;0;Simone;;Seiler;Pfäffikon;5;lic.rer.pol., dipl. Berufsschullehrerin;Für ein achtsames und solidarisches Miteinander für alle statt für wenige.;1960;
+;0;Sandro;;Turcati;Pfäffikon;7;Verkehrsingenieur;Für gleiche Chancen für alle - unabhängig von Herkunft, Geschlecht, Religion und Einkommen.;1968;
+;0;Leonardo;;Bosshard;Meilen;12;Architekturstudent;Für die Zukunft. Für die Menschen. Für eine ökologische Lebensgrundlage für alle.;2001;
+;0;Jonathan;;Daum;Meilen;5;Politischer Sekretär, Student;Für faire Löhne, bessere Anstellungsbedingungen und gegen jede Diskriminierung. Grenzenlose Solidarität!;2001;
+;1;Hanspeter;;Göldi;Meilen;2;Küchenchef;Für eine gute Berufsbildung und eine starke Arbeitnehmervertretung.;1960;
+;0;Corina;;Jeanmaire;Meilen;7;Soziologin, Campaignerin;Für eine lebenswerte Zukunft: nachhaltig, gemeinschaftlich, gleichgestellt.;1997;
+;0;Sandra;;Konrad;Meilen;8;Betriebsökonomin FH;Wir benötigen eine gute Lebensgrundlage für alle, auch jene, die nicht auf der Sonnenseite des Lebens stehen.;1970;
+;0;Muriel;;Langenberger;Meilen;4;M.A. internationale Beziehungen, NPO-Geschäftsleiterin;Gesellschaft sind wir alle. Alle anders. Allen ihre Chancen.;1969;
+;0;Guido;;Lehmann;Meilen;11;Fahrdienstmitarbeiter;Der Bezirk Meilen soll attraktiver und bezahlbarer Lebensraum für alle sein, kein Schlafbezirk nur für Superreiche.;1974;
+;1;Rafael ;;Mörgeli;Meilen;1;Historiker, Geschäftsführer;Für mehr Gemeinsinn und Respekt im Kanton Zürich.;1992;
+;0;Franziska;;Steiner;Meilen;10;Rechtsanwältin;Eine Goldküste für alle - sozial, gerecht, familienfreundlich.;1990;
+;0;Manuela;;Tremonte;Meilen;3;Schulische Heilpädagogin;Tatkräftig und lösungsorientiert: «Partizipation, soziale und finanzielle Gerechtigkeit und Sicherheit für ALLE im Kanton Zürich!»;1969;
+;0;Efe;;Yildiz;Meilen;9;Fachmann Betriebsunterhalt (EFZ);Im Zentrum steht der Mensch, denn es ist Solidarität und Errungenschaft von 99 %. Für mehr Qualität statt Abbau von Lebensqualität!;1997;
+;0;Josias;;Zeller;Meilen;6;Projektingenieur IT, Geograph;Für eine solidarische und pragmatische Klimapolitik in unserem Kanton.;1994;
+;0;Sait;;Acar;Horgen;13;Küchenchef;;1969;
+;0;Anna;;Baumann;Horgen;9;Umweltingenieurstudent*in;;1997;
+;0;Bernadette;;Dubs;Horgen;10;Gemeinderätin (Exekutive), Primarlehrerin, Fachlehrperson DaZ, pens.;Der Kanton Zürich kann. Solidarisch sein, mit starkem gemeinnützigem Wohnungsbau und Chancengleichheit an den Schulen für alle;1958;
+;1;Jonas;;Erni;Horgen;1;Dipl. Umweltingenieur, Stadtrat;Für eine erneuerbare, saubere und sichere Energiezukunft. Für Stadt und Land.;1981;
+;0;Denise;;Fausch;Horgen;14;;;;
+;0;Ramon;;Iten;Horgen;7;Ingenieur Maschinenbau;;1994;
+;0;Joelle;;Jäger;Horgen;6;Archeologie MAS Studentin;;1994;
+;1;Davide;;Loss;Horgen;3;Rechtsanwalt MLaw;;1987;
+;1;Carmen;;Marty-Fässler;Horgen;2;Primarlehrerin, Stadträtin;Für Chancengerechtigkeit in der Bildung. Für eine starke, offene Politik in der Agglomeration.;1980;
+;0;Lorenz;;Rey;Horgen;11;Musiklehrer, Architekt;;1970;
+;0;Erdas;;Sen;Horgen;15;Schuhmacher;Ich will ein Zürich, in dem alle Kulturen und Farben zusammenleben.;1964;
+;0;Angelika;;Sulser;Horgen;8;Kita-Leiterin;Bildung und Chancengleichheit für alle.;1980;
+;0;Daniel;;Tanner;Horgen;12;Stadtrat;;1962;
+;0;Thomas;;Walker;Horgen;5;Pensionierter Arzt ( bis 2019 medizinischer IKRK-Delegierter);Mehr soziale Gerechtigkeit: gegen Egoismus und Materialismus!;1954;
+;0;Esen;;Yilmaz;Horgen;4;Account Manager;;1975;
+;0;Jonathan;;Assenberg;Hinwil;7;Geschäftsführer;Für Veränderung durch eine solidarische und nachhaltige Klima- und Wirtschaftspolitik. Für Gleichberechtigung und eine vielfältige Gesellschaft.;1986;
+;1;Harry;;Brandenberger;Hinwil;1;Dipl.-Ing. ETH, Unternehmer;Mehr Platz für unsere Natur - Verlust der Biodiversität stoppen.;1971;
+;0;Madleina;;Brunner Thiam;Hinwil;10;;;;
+;0;Advije;;Delihasani;Hinwil;2;Fachfrau im Finanz- und Rechnungswesen;Für eine Politik, die den Menschen und die Umwelt in den Mittelpunkt stellt.;1981;
+;0;Franziska;;Hagen;Hinwil;5;Sachbearbeiterin Zusatzleistungen zur AHV/IV;Für gleiche Chancen und Rechte: in der Bildung, im Job und im Alter.;1981;
+;0;Julia;;Iten;Hinwil;4;Serviceangestellte;Für eine Gesellschaft mit echter Chancengleichheit, ohne kapitalistischer Ausbeutung von Mensch und Natur!;2002;
+;0;Matthias;;Mäder;Hinwil;3;;;;
+;0;Brigitte;;Meier Hitz;Hinwil;6;Schulleiterin und Geschäftsführerin;Im Kanton Zürich brauchen wir dringend mehr bezahlbare Wohnungen und soziale Gerechtigkeit. Dafür setze ich mich als Frau mit Herz ein.;1966;
+;0;Silas;;Muggli;Hinwil;11;;;;
+;0;Lukas;;Neukom;Hinwil;8;;;;
+;0;Wim;;van Moorsel;Hinwil;9;IT- Consultant;Für eine gesündere Balance zwischen arm und reich - und den nachhaltigen Schutz unserer Umwelt.;1957;
+;0;Rixhil;;Agusi;Dietikon;5;Geschäftsinhaberin;Mehr bezahlbare Kitas, um Familie und Beruf zu vereinbaren.;1986;
+;0;Scharmila;;Bansal-Tönz;Dietikon;8;;;1980;
+;1;Markus;;Bärtschiger;Dietikon;2;Volkswirtschafter, Stadtpräsident;Natur und soziale Netze müssen für alle erhalten bleiben.;1962;
+;0;Agron;;Beqiri;Dietikon;7;;;1987;
+;0;Besarta;;Berisha Cakolli;Dietikon;6;;;1985;
+;0;Leila;;Drobi;Dietikon;10;;;1992;
+;1;Rosmarie;;Joss;Dietikon;1;;;1982;
+;0;Katharina;;Kiwic;Dietikon;11;;;1996;
+;0;Flavio;;Lustenberger;Dietikon;9;Hochbauzeichner, Präsident SP Oberengstringen;Zügige Digitalisierung, zeitgemässe Bildung und zahlbare Wohnungen – für das stehe ich ein.;2001;
+;0;Martin;;Steiner;Dietikon;3;;;1991;
+;0;Samuel;;Wenk;Dietikon;4;;;1998;
+;0;Dominik;;Fleischli;Dielsdorf;9;Gebäudetechnikplaner;Ich setze mich für einen vielseitigen Kanton Zürich ein, in dem alle die gleichen Chancen haben. Eine junge Stimme im Kantonsrat.;2003;
+;0;Nick;;Glättli;Dielsdorf;2;Politologe, Selbstständiger Data Consultant;Ich will, dass alle mehr vom Leben haben. Für bezahlbaren Wohnraum – für eine starke Pflege – für ein erstes Kinderhospiz.;1999;
+;0;Gürkan;;Gür;Dielsdorf;5;;;1989;
+;0;Carsten;;Hügin;Dielsdorf;4;Senior Transportmanager;Für ein vielfältiges, nachhaltiges und sozial gerechtes Furttal. Jetzt und in der Zukunft.;1968;
+;0;Simon;;Jacob;Dielsdorf;7;Fachmittelschüler;Für ein Zürich mit gerechten Bildungschancen für alle!;2004;
+;0;Corinne;;Lee-Wenger;Dielsdorf;3;;;1966;
+;0;Anja Lynn;;Niesper;Dielsdorf;8;;;1998;
+;0;Roland;;Niesper;Dielsdorf;11;;;1959;
+;0;Karin;;Rogala;Dielsdorf;10;Dozentin für Sozialpädagogik;Für die Vereinbarkeit von Familie und Beruf und für ein starkes System der sozialen Sicherheit für alle Lebensalter.;1963;
+;1;Beatrix;;Stüssi;Dielsdorf;1;Kauffrau, Schulpräsidentin, Gemeinde- und Kantonsrätin;Für Chancengleichheit in der Bildung, sozialverträgliche Umweltpolitik, Vereinbarkeit von Familie und Beruf und Gleichberechtigung und Sicherheit aller.;1960;
+;0;Nadja;;Tofani;Dielsdorf;6;;;1991;
+;0;Lulzime;;Agusi;Bülach;10;;;;
+;0;Kurt;;Altenburger;Bülach;4;;;;
+;0;Ceren;;Bingöl;Bülach;15;;;;
+;0;Allan;;Boss;Bülach;18;Praktikant Stadtplanung;Für eine menschliche Umwelt.;2002;
+;1;Michèle;;Dünki-Bättig;Bülach;1;Verantwortliche Stab & Kommunikation, Gemeinderätin;Für einen solidarischen Kanton Zürich. Für einen starken Service Public. Für Dich.;1989;
+;1;Christoph;;Fischbach;Bülach;3;Kaufmännischer Angestellter, Stadtrat;Zürich muss gerechter und solidarischer werden. Für eine bessere Chancengleichheit muss das Bildungswesen gestärkt werden.;1978;
+;0;Laura;;Fischer;Bülach;11;;;;
+;0;Fabien;;Forestier;Bülach;17;Student Bsc Raumbezogene Ingenieurwissenschaften;Wir brauchen ein gleichgestelltes und gerechtes Bildungssystem für alle Menschen und alle sozialen Schichten.;2002;
+;0;Philip;;Graf ;Bülach;14;MSc ETH Masch.-Ing., Gemeinderat;Der Ausbau erneuerbarer Energieträger muss zwingend beschleunigt werden. Für die Versorgungssicherheit. Für den Klimaschutz.;1997;
+;0;Adrian;;Hediger;Bülach;9;;;;
+;1;Qëndresa;;Hoxha-Sadriu;Bülach;2;Dentalassistentin, Studentin Soziale Arbeit;Für einen solidarischen Kanton. Für Stärkung unseres Bildungssystems. Für mehr vielseitige Kultur im gesamten Kanton.;1994;
+;0;Esther;;Lehmann;Bülach;12;;;;
+;0;René;;Nussbaumer ;Bülach;13;Leiter Sonderpädagogik;Bildung ist der Schlüssel zum Erfolg. Die besten Start- und Bildungsmöglichkeiten für unsere Kinder.;1968;
+;0;Lejla;;Salihu;Bülach;6;Dr. med., Schulärztin, Schulärztliche Bereichsleiterin;Für starke Familien, endlich eine echte Gleichstellung in Beruf & Gesellschaft. Sowie Förderung von Gesundheit und Bildung für alle!;1985;
+;0;Selina;;Stampfli;Bülach;8;Sozialarbeiterin, Gemeinderätin Bassersdorf;Zürich - ein Kanton in welchem: Volksschule alle gut bildet. Löhne ein würdevolles Leben ermöglichen.;1973;
+;0;Max;;Töpfer;Bülach;7;Parteisekretär, Gemeinderat;Für einen Kanton Zürich der vorwärts macht - beim bezahlbaren Wohnraum, beim Klimaschutz und beim Mindestlohn.;2000;
+;0;Oliver;;Wenczel;Bülach;16;;;;
+;0;Géraldine;;Wirth;Bülach;5;;;;
+;0;Holger;;Gurtner;Andelfingen;2;Regionalleiter Schulsozialarbeit;Ich ergreife Partei für eine gerechte Gesellschaft und ein offenes Weinland.;1980;Er/ihm
+;1;Sibylle;;Jüttner;Andelfingen;1;Historikerin, Prorektorin;;1974;Sie/ihr
+;0;Arnold;;Kohler;Andelfingen;3;Fotograf;;1964;Er/ihm
+;0;Jasmin;;Michaud;Andelfingen;4;Sales Manager;Für ein tolerantes Zürich. Für faire Chancen für alle. Für eine Fähigkeitsorientierte Zukunft unserer Kinder.;1991;Sie/ihr
+;0;Emma;;Ayubi;Affoltern;4;Kommunikationsberaterin;;1986;Sie/ihr
+;0;Felix;;Fürer;Affoltern;3;Schulleiter, Stadtrat Affoltern am Albis;Für eine starke Vertretung des Knonaueramtes. Für eine Standortförderung durch solidarisches Handeln.;1960;Er/ihm
+;0;Martin;;Gallusser;Affoltern;7;Oekonom, Informatiker;Bezahlbares Wohnen für alle - mit aktivem Engagement der Gemeinden.;1953;Er/ihm
+;1;Hannah;;Pfalzgraf;Affoltern;1;Hebammenstudentin, Jugendprojektleiterin;;1997;Sie/ihr
+;0;Roger;;Schmutz;Affoltern;2;Marketing, Werbung, PR, Webdesign;Günstige Wohnungen, mehr Solarenergie, weniger Verkehr, tiefere Krankenkassenprämien und  Bildung für alle - dafür setze mich ein.;1978;Er/ihm
+;0;Andrea;;Sidler;Affoltern;5;Lehrerin für Hauswirtschaft und Gestalten;;1966;Sie/ihr
+;0;Cafer;;Sterk;Affoltern;6;Sozialarbeiter;;1967;Er/ihm

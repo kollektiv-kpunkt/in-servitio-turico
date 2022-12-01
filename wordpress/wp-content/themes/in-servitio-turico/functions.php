@@ -85,6 +85,17 @@ function ist_cookie_shortcode($atts, $content = null) {
 
 add_shortcode('ist-cookie-settings', 'ist_cookie_shortcode');
 
+function ist_webhook_form_shortcode($atts, $content = null) {
+    ob_start();
+    $args = array(
+        "config" => $atts["config"],
+    );
+    get_template_part( "template-parts/elements/webhook-form", null, $args );
+    return ob_get_clean();
+}
+
+add_shortcode('ist-webhook-form', 'ist_webhook_form_shortcode');
+
 // ACF
 
 function ist_acf() {

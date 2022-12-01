@@ -1,0 +1,59 @@
+{
+  "wh-url" : "https://n8n.victorinus.ch/webhook/528bea57-e7b3-4f4c-aa64-7ab3abd374da",
+  "wh-method" : "POST",
+
+  "steps": {
+    "1": {
+      "type" : "form",
+      "fields" : {
+        "email" : {
+          "type" : "email",
+          "label" : "Email",
+          "required" : true,
+          "fullwidth" : true
+        }
+      },
+      "submit" : "Weiter"
+    },
+    "2": {
+      "type" : "form",
+      "fields" : {
+        "fname" : {
+          "type" : "text",
+          "label" : "Vorname",
+          "required" : true
+        },
+        "lname" : {
+          "type" : "text",
+          "label" : "Nachname",
+          "required" : true
+        }
+      },
+      "submit" : "Weiter"
+    },
+    "3": {
+      "type" : "form",
+      "fields" : {
+        "phone" : {
+          "type" : "text",
+          "label" : "Telefonnummer",
+          "pattern" : "[0][0-9]{9}",
+          "required" : false,
+          "fullwidth" : true,
+          "placeholder" : "Optional"
+        },
+        "hc_worker" : {
+          "type" : "checkbox",
+          "label" : "Bist du in einem Gesundheitsberuf tätig?",
+          "fullwidth" : true,
+          "checked" : true
+        }
+      },
+      "submit" : "Mitmachen"
+    }
+  },
+  "thanksInterface" : {
+    "type" : "text",
+    "text" : "Vielen Dank für deine Unterstützung!"
+  }
+}
