@@ -1,6 +1,6 @@
 module.exports = {
   content: require("fast-glob").sync(["./**/*.php", "*.php"]),
-  safelist: ["text-spred", "transform", "scale-105", "origin-right"],
+  safelist: ["text-spred", "transform", "scale-105", "origin-right", "fixed", "top-0", "left-0", "w-full", "h-full", "flex", "items-center", "justify-center", "bg-black", "bg-opacity-50", "z-50", "backdrop-filter", "backdrop-blur-sm", "opacity-0", "pointer-events-none", "opacity-100", "pointer-events-auto", "text-white", "text-2xl", "font-bold", "transition-opacity", "duration-500"],
   theme: {
     extend: {
       colors: {

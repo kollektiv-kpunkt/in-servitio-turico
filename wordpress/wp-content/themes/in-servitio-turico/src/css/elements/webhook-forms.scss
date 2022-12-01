@@ -1,0 +1,69 @@
+@import "../../../lib/font-awesome/css/font-awesome.min.scss";
+
+.StepWrapper:not([hidden]) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.ist-input-wrapper {
+    width: calc(50% - 0.75rem);
+}
+
+.ist-input-wrapper.fullwidth {
+    width: 100%;
+}
+
+.ist-input-wrapper label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: var(--form-color, var(--spred));
+}
+
+.ist-input-wrapper {
+
+    input,
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 3px solid var(--form-color, var(--spred));
+        background-color: transparent;
+        padding: 0.5em 0;
+        outline: none;
+        color: var(--form-color, var(--spred));
+    }
+
+    button {
+        margin-left: auto;
+        margin-right: 0;
+        font-size: 1.25rem;
+    }
+}
+
+.ist-input-wrapper.checkbox {
+    display: flex;
+}
+
+.ist-input-wrapper.checkbox label {
+    width: 100%;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.ist-input-wrapper.checkbox input[type="checkbox"]+label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f0c8";
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+.ist-input-wrapper.checkbox input[type="checkbox"]:checked+label:before {
+    content: "\f14a";
+}
+
+.ist-input-wrapper.checkbox label.font-bold {
+    font-weight: bold;
+}

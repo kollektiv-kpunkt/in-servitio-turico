@@ -24,6 +24,25 @@
             "layout": "vertical",
             "toggle": 0,
             "save_custom": 0
+        },
+        {
+            "key": "field_637f7674ee62d",
+            "label": "Slogan beneath Title",
+            "name": "slogan",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -65,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668276642
+    "modified": 1669297793
 }

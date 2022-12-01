@@ -1,6 +1,9 @@
 <div class="ist-pageheroine-wrapper mb-20">
 <?php
 if (isset($args["image"]) && $args["image"] != "") :
+	if (!isset($args["subtitle"]) && get_field("slogan") != "") {
+		$args["subtitle"] = get_field("slogan");
+	}
 ?>
     <div class="ist-pageheroine-with-image">
         <div class="ist-pageheroine-image">
