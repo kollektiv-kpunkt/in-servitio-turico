@@ -40,7 +40,7 @@
                     else:
                     ?>
                     <label for="<?= $name ?>-<?=$formid?>" class="text-xl"><?= $field["label"] ?></label>
-                    <input type="<?= $field["type"]?>" name="<?= $name ?>" id="<?= $name ?>-<?=$formid?>"<?= (isset($field["class"])) ? " class='{$field["class"]}'" : "" ?><?= (isset($field["required"])) ? " required" : "" ?>>
+                    <input type="<?= $field["type"]?>" name="<?= $name ?>" id="<?= $name ?>-<?=$formid?>"<?= (isset($field["class"])) ? " class='{$field["class"]}'" : "" ?><?= (isset($field["placeholder"])) ? " placeholder='{$field["placeholder"]}'" : "" ?><?= (isset($field["required"]) && $field["required"] == true) ? " required" : "" ?><?= (isset($field["pattern"])) ? " pattern={$field["pattern"]}" : "" ?>>
                     <?php
                     endif;
                     ?>
@@ -99,6 +99,6 @@
     endforeach;
     ?>
     <div class="ist-webhookform-step" data-step-id="<?=$formid?>-<?= $id ?>"<?= ($i > 0) ? " hidden" : ""?> data-step-type="thanksInterface">
-        <p class="font-bold"><?= $config["thanksInterface"]["text"]?></p>
+        <p class="font-bold text-xl"><?= $config["thanksInterface"]["text"]?></p>
     </div>
 </div>

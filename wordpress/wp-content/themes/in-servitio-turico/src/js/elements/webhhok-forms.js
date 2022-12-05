@@ -1,4 +1,4 @@
-import {v4 as uuidv4} from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
 
@@ -15,12 +15,16 @@ if (document.querySelector(".ist-webhookform-form")) {
         let notyf = new Notyf({
           duration: 9000,
           position: {
-            x: "center",
-            y: "center",
+            x: "left",
+            y: "bottom",
           },
           dismissible: true
         });
-        notyf.error(`Da scheint etwas schief gelaufen zu sein. Bitte versuche es später erneut. (${response.message})`);
+        if (response.custom_msg) {
+          notyf.error(response.message);
+        } else {
+          notyf.error(`Da scheint etwas schief gelaufen zu sein. Bitte versuche es später erneut. (${response.message})`);
+        }
       }
       removeLoader(loader)
     });
@@ -50,26 +54,26 @@ function removeLoader(id) {
 }
 
 async function sendFormdata(form) {
-    let currentData = JSON.parse(form.closest(".ist-webhook-form-wrapper").getAttribute("data-formdata"))
-    let formData = new FormData(form);
-    let data = {};
-    for (let [key, value] of formData.entries()) {
-      data[key] = value;
-    }
-    data = { ...currentData, ...data };
-    let url = form.getAttribute("action");
-    let method = form.getAttribute("method");
-    let headers = {
-      "Content-Type": "application/json",
-    };
-    let body = JSON.stringify(data);
-    let response = await fetch(url, {
-      method,
-      headers,
-      body,
-    });
-    form.closest(".ist-webhook-form-wrapper").setAttribute("data-formdata", JSON.stringify(data));
-    return response.json();
+  let currentData = JSON.parse(form.closest(".ist-webhook-form-wrapper").getAttribute("data-formdata"))
+  let formData = new FormData(form);
+  let data = {};
+  for (let [key, value] of formData.entries()) {
+    data[key] = value;
+  }
+  data = { ...currentData, ...data };
+  let url = form.getAttribute("action");
+  let method = form.getAttribute("method");
+  let headers = {
+    "Content-Type": "application/json",
+  };
+  let body = JSON.stringify(data);
+  let response = await fetch(url, {
+    method,
+    headers,
+    body,
+  });
+  form.closest(".ist-webhook-form-wrapper").setAttribute("data-formdata", JSON.stringify(data));
+  return response.json();
 }
 
 function nextStep(form) {

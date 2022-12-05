@@ -1,59 +1,49 @@
 {
-  "wh-url" : "https://n8n.victorinus.ch/webhook/528bea57-e7b3-4f4c-aa64-7ab3abd374da",
-  "wh-method" : "POST",
-
+  "wh-url": "https://n8n.victorinus.ch/webhook/528bea57-e7b3-4f4c-aa64-7ab3abd374da",
+  "wh-method": "POST",
   "steps": {
     "1": {
-      "type" : "form",
-      "fields" : {
-        "email" : {
-          "type" : "email",
-          "label" : "Email",
-          "required" : true,
-          "fullwidth" : true
-        }
-      },
-      "submit" : "Weiter"
-    },
-    "2": {
-      "type" : "form",
-      "fields" : {
-        "fname" : {
-          "type" : "text",
-          "label" : "Vorname",
-          "required" : true
+      "type": "form",
+      "fields": {
+        "fname": {
+          "type": "text",
+          "label": "Vorname",
+          "required": true
         },
-        "lname" : {
-          "type" : "text",
-          "label" : "Nachname",
-          "required" : true
-        }
-      },
-      "submit" : "Weiter"
-    },
-    "3": {
-      "type" : "form",
-      "fields" : {
-        "phone" : {
-          "type" : "text",
-          "label" : "Telefonnummer",
-          "pattern" : "[0][0-9]{9}",
-          "required" : false,
-          "fullwidth" : true,
-          "placeholder" : "Optional"
+        "lname": {
+          "type": "text",
+          "label": "Nachname",
+          "required": true
         },
-        "hc_worker" : {
-          "type" : "checkbox",
-          "label" : "Bist du in einem Gesundheitsberuf tätig?",
-          "fullwidth" : true,
-          "checked" : true
+        "email": {
+          "type": "email",
+          "label": "E-Mail",
+          "required": true
+        },
+        "phone": {
+          "type": "text",
+          "label": "Telefonnummer <em style='font-weight: 400'>(optional)</em>",
+          "pattern": "[0][0-9]{9}|[+][4][1][0][0-9]{9}|[+][4][1][0-9]{2}[ ][0-9]{3}[ ][0-9]{2}[ ][0-9]{2}",
+          "required": false
+        },
+        "hc_worker": {
+          "type": "checkbox",
+          "label": "Sind Sie in einem Pflegebereich tätig?",
+          "fullwidth": true,
+          "checked": false
+        },
+        "optin": {
+          "type": "checkbox",
+          "label": "Mit dem Absenden erklären Sie sich bereit, dass die SP Sie auf dem Laufenden halten darf. <a href='https://wahlen-kanton-zuerich.ch/datenschutz/' target='_blank'>Hier</a> finden Sie unsere Datenschutz-Policy.",
+          "fullwidth": true,
+          "checked": true
         }
       },
-      "submit" : "Mitmachen"
+      "submit": "Mitmachen"
     }
   },
-  "thanksInterface" : {
-    "type" : "text",
-    "text" : "Vielen Dank für deine Unterstützung!"
+  "thanksInterface": {
+    "type": "text",
+    "text": "Vielen Dank für Ihre Unterstützung!"
   }
 }
