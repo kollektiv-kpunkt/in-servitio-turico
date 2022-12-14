@@ -69,6 +69,22 @@ $kandiID = $args["kandiID"];
                         endif;
                         ?>
                     </p>
+                    <div class="ist-kandi-some flex gap-x-2 mt-4">
+                        <?php
+                        if (get_field("social_media", $kandi->ID)) {
+                            $somes = array_filter(get_field("social_media", $kandi->ID));
+                        } else {
+                            $somes = array();
+                        }
+                        foreach ($somes as $name => $some) :
+                        ?>
+                        <div class="p-2 bg-spred rounded-full">
+                            <a href="<?= $some ?>" class="ist-noline flex" target="_blank"><i data-feather="<?= $name ?>" class="text-white h-4 w-4"></i></a>
+                        </div>
+                        <?php
+                        endforeach;
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

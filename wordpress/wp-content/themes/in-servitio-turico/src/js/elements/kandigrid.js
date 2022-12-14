@@ -1,6 +1,6 @@
-if (document.querySelector(".ist-kandi")) {
-  document.querySelectorAll(".ist-kandi").forEach(function (kandi) {
-    kandi.addEventListener("click", function (e) {
+if (document.querySelector(".ist-kandi-img")) {
+  document.querySelectorAll(".ist-kandi-img").forEach(function (kandiImg) {
+    kandiImg.addEventListener("click", function (e) {
       let kandi = e.target.closest(".ist-kandi");
       let kandiID = kandi.getAttribute("data-kandi-id");
 

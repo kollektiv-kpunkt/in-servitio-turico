@@ -1,5 +1,6 @@
 {
   "wh-url": "https://n8n.victorinus.ch/webhook/528bea57-e7b3-4f4c-aa64-7ab3abd374da",
+  "wh-tag" : "samichlaus-aktion",
   "wh-method": "POST",
   "steps": {
     "1": {
@@ -28,18 +29,21 @@
         },
         "hc_worker": {
           "type": "checkbox",
-          "label": "Sind Sie in einem Pflegebereich tätig?",
+          "label": "Ich bin im Pflegebereich tätig",
           "fullwidth": true,
           "checked": false
         },
-        "optin": {
-          "type": "checkbox",
-          "label": "Mit dem Absenden erklären Sie sich bereit, dass die SP Sie auf dem Laufenden halten darf. <a href='https://wahlen-kanton-zuerich.ch/datenschutz/' target='_blank'>Hier</a> finden Sie unsere Datenschutz-Policy.",
-          "fullwidth": true,
-          "checked": true
+        "submit": {
+          "type": "submit",
+          "text": "Mitmachen",
+          "fullwidth": true
+        },
+        "helper": {
+          "type": "helper",
+          "content": "Mit dem Absenden erklären Sie sich bereit, dass die SP Sie auf dem Laufenden halten darf.<br><a href='https://wahlen-kanton-zuerich.ch/datenschutz/' target='_blank'>Hier</a> finden Sie unsere Datenschutz-Policy.",
+          "fullwidth": true
         }
-      },
-      "submit": "Mitmachen"
+      }
     }
   },
   "thanksInterface": {
